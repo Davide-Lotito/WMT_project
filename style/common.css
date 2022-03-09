@@ -21,6 +21,7 @@ body {
   max-width: 5%;
   margin: auto;
   border-radius: 50%;
+  background-color: grey;
 }
 
 #menu ul {
