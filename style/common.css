@@ -1,0 +1,63 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 95%;
+  font-family: Verdana, sans-serif;
+  color: white;
+  background-color: black;
+  background-image: url("/images/background.png");
+  background-repeat: no-repeat;
+}
+
+#menu {
+  position: relative;
+  top: 20px;
+  width: 95%;
+  margin: auto;
+}
+
+#menu img {
+  max-height: 5%;
+  max-width: 5%;
+  margin: auto;
+  border-radius: 50%;
+}
+
+#menu ul {
+  position: absolute;
+  top: 0%;
+  right: 0.5em;
+}
+
+#menu li {
+  position: relative;
+  float: left;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+#menu li a {
+  width: 100px;
+  /* height: 30px; */
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 30px;
+  background-color: grey;
+  color: white;
+}
+
+#menu li a:hover {
+  color: black;
+}
+
+/*the home link*/
+#menu ul li a.active {
+  background-color: goldenrod;
+}
+
+/*the login link*/
+#menu ul li a.login-link {
+  background-color: red;
+}
