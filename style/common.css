@@ -9,12 +9,43 @@ body {
     background-repeat: no-repeat;
 }
 
-#menu ul{
+#back-on-top {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    right: 4em;
+    width: 5%;
+    z-index: 99;
+    outline: none;
+    background-color: yellowgreen;
+    opacity: 0.8;
+    cursor: pointer;
+    padding: 1em;
+    border: none;
+    border-radius: 100%;
+}
+
+#back-on-top:hover {
+    background-color: yellow;
+}
+
+#menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    opacity: 0.8;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 100px;
 }
 
 #menu li {
@@ -49,20 +80,30 @@ body {
 
 /*media queries for the navigation-bar*/
 @media (max-width: 600px) {
-    #menu li.right, 
-    #menu li {float: none;}
+
+    #menu li.right,
+    #menu li {
+        float: none;
+    }
 }
 
-#footer{
+#footer {
     position: relative;
     bottom: 0;
     width: 95%;
     margin: auto;
-    background-color: grey;
-    text-align: center;
+    background-color: #333;
+    text-align: left;
     font-size: 100%;
-    padding: 0.5em;
+    padding: 1em;
     padding-right: 1em;
+}
+
+#footer .social-links{
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 1em;
 }
 
 .fa {
@@ -71,23 +112,30 @@ body {
     text-align: center;
     text-decoration: none;
     margin: 0.5em 0.1em;
-  }
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-  .fa-facebook {
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
     background: #3B5998;
     color: white;
-  }
+}
 
-  .fa-instagram {
+.fa-instagram {
     background: #125688;
     color: white;
-  }
+}
 
-  .fa-twitter {
+.fa-twitter {
     background: #55ACEE;
     color: white;
-  }
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

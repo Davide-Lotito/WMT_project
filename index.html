@@ -12,10 +12,8 @@
 </head>
 
 <body>
-    <nav id="menu">
-        <!-- <div>
-            <a href="./index.html"><img src="./images/chef_white_icon.png"></a>
-        </div> -->
+    <nav id="menu" class="dropdown">
+        <button onclick="topFunction()" id="back-on-top" title="back on top"><img class="center" src="./images/chef_white_icon.png"></button>
         <ul>
             <li><a class="active" href="./index.html">Home</a></li>
             <li><a href="./kitchen.html">Kitchen</a></li>
@@ -27,18 +25,26 @@
         </ul>
     </nav>
     <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
     </p>
-    <div id="home-image">
-        <img src="/images/food/food1.jpg" alt="first example of food">
+    <div id="home-image" class="content">
+        <img src="/images/food/food1.jpg" alt="first example of food" title="food1">
     </div>
     <footer id="footer">
         &copy; Restaurant da Davide - 2022
         <br>
-        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-        <a href="https://www.twitter.com/" class="fa fa-twitter"></a>
-        <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        <div class="social-links">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://www.twitter.com/" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </div>
     </footer>
+    <script src="script/common.js"></script>
 </body>
 
 </html>
