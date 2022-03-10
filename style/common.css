@@ -5,7 +5,8 @@ body {
     font-family: Verdana, sans-serif;
     color: white;
     background-color: black;
-    background-image: url("/images/background.png");
+    background-color: darkslategrey;
+    /* background-image: url("/images/background.png"); */
     background-repeat: no-repeat;
 }
 
@@ -79,7 +80,7 @@ body {
 }
 
 /*media queries for the navigation-bar*/
-@media (max-width: 600px) {
+@media (max-width: 500px) {
 
     #menu li.right,
     #menu li {
