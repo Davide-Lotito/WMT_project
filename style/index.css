@@ -3,4 +3,8 @@
     padding: 10%;
     margin: auto;
     overflow: hidden;
-} 
+}
+
+.title{
+    text-align: center;
+}
