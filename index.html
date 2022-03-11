@@ -13,7 +13,8 @@
 
 <body>
     <nav id="menu" class="dropdown">
-        <button onclick="topFunction()" id="back-on-top" title="back on top"><img class="center" src="./images/arrowUp.png" alt="arrow Up"></button>
+        <button onclick="topFunction()" id="back-on-top" title="back on top"><img class="center"
+                src="./images/arrowUp.png" alt="arrow Up"></button>
         <ul>
             <li><a class="active" href="./index.html">Home</a></li>
             <li><a href="./kitchen.html">Kitchen</a></li>
@@ -31,11 +32,37 @@
         a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
         remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+        of Lorem Ipsum. <em>Add here a small descrpition.</em>
     </p>
-    <div id="home-image" class="content">
-        <img src="/images/food/food1.jpg" alt="first example of food" title="food1">
-    </div>
+    <!-- Slideshow container -->
+    <main class="slideshow-container">
+        <div class="single-slide fade">
+            <img src="./images/foodB/food1.png">
+        </div>
+        <div class="single-slide fade">
+            <img src="./images/foodB/food2.png">
+        </div>
+        <div class="single-slide fade">
+            <img src="./images/foodB/food3.png">
+        </div>
+        <div class="single-slide fade">
+            <img src="./images/foodB/food4.png">
+        </div>
+        <div class="single-slide fade">
+            <img src="./images/foodB/food5.png">
+        </div>
+        <!-- Next and previous buttons -->
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+        <!-- The dots/circles -->
+        <!-- <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div> -->
+    </main>
     <footer id="footer">
         &copy; Restaurant da Davide - 2022
         <br>
@@ -45,7 +72,11 @@
             <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
         </div>
     </footer>
-    <script src="script/common.js"></script>
+    <script src="./script/common.js"></script>
+    <script src="./script/index.js"> 
+        autoShow();
+        manualShow();
+    </script>
 </body>
 
 </html>
