@@ -1,7 +1,3 @@
-.title{
-    text-align: center;
-}
-
 .slideshow-container {
   width: 50%;
   height: 50%;
@@ -58,14 +54,70 @@
   to {opacity: 1}
 }
 
-.brief-description-bottom{
-  margin: auto;
+#brief-description{
+  position: relative;
+  top: 4em;
   text-align: center;
-  padding: 3em;
-  padding-top: 0.1em;
-  letter-spacing: 3px;
+  padding-top: 0.5em;
+  padding-bottom: 2em;
+  letter-spacing: 0.4em;
+  margin: auto;
+  width: 75%;
 }
 
-.brief-description-bottom h4{
-  font-size: x-large;
+#brief-description h4{
+  font-size: 1.5em;
+  margin: auto;
+}
+
+#big-menu-button{
+  position: relative;
+  top: 3em; bottom: 3em;
+  margin: auto;
+  text-align: center;
+  padding: 0.1em;
+  letter-spacing: 0.1em;
+  font-size: xx-large;
+  font-weight: bold;
+  margin: auto;
+  width: 30%;
+}
+
+#big-menu-button a{
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+
+#big-menu-button a:hover {
+  background-color: rgb(192, 192, 192);
+  color: black;
+}
+
+.title-font{
+  /* font-family: "Zen Antique";  */
+  font-size: 4em;
+  background-color: unset;
+  border: unset;
+  text-align: center;
+  font-style: bold;
+}
+
+#title-area{
+  margin: auto;
+}
+
+#title-text{
+  position: absolute;
+  right: 25%;
+  width: 50%;
+}
+
+#title-area img{
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 1em 0.5em 1em;
+  max-width: 10%;
+  min-height: 10%;
 }

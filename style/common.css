@@ -1,9 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    /* font-size: 95%; */
+    font-size: 95%;
     font-family: Verdana, sans-serif;
     font-family: "Zen Antique Soft";
+    font-family: "Amatic SC";
     color: white;
     background-color: black;
     background-color: darkslategrey;
@@ -31,6 +32,12 @@ body {
     background-color: yellow;
 }
 
+.slideshow-container{
+    position: relative;
+    top: 3em;
+    border: 2px yellow solid;/*REMOVE*/
+}
+
 #menu ul {
     list-style: none;
     margin: 0;
@@ -40,18 +47,9 @@ body {
     opacity: 0.8;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.sticky+.content {
-    padding-top: 100px;
-}
-
 #menu li {
     float: left;
+    font-size: x-large;
 }
 
 #menu li a {
@@ -103,28 +101,17 @@ body {
     font-style: normal; 
 }
 
-.title-font{
-    font-family: "Zen Antique"; 
-    font-size: 3em;
-    background-color: unset;
-    border: unset;
-    text-align: center;
-}
-
-#title{
-    margin: auto;
-    border: 1px yellow solid;
-}
-
-#title img{
-    position: relative;
-    top: 0;
-    right: 0;
+@font-face { 
+    font-family:"Amatic SC"; 
+    src:url("./fonts/Amatic_SC/AmaticSC-Regular.ttf") format("truetype");
+    font-weight: normal; 
+    font-style: normal; 
 }
 
 #footer {
     position: relative;
     bottom: 0;
+    top: 3em;
     width: 95%;
     margin: auto;
     background-color: #333;

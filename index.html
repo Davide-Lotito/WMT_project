@@ -6,7 +6,7 @@
     <title>Restaurant da Davide</title>
     <link rel="stylesheet" href="/style/common.css">
     <link rel="stylesheet" href="/style/index.css">
-    <link rel="icon" type="image/png" sizes="50x50" href="/images/chef_white_icon.png">
+    <link rel="icon" type="image/png" href="/images/chef_white_icon.png">
     <!-- icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -17,7 +17,6 @@
                 src="./images/arrowUp.png" alt="arrow Up"></button>
         <ul>
             <li><a class="active" href="./index.html">Home</a></li>
-            <li><a href="./pages/kitchen.html">Kitchen</a></li>
             <li><a href="./pages/menu.html">Menu</a></li>
             <li><a href="./pages/book.html">Reserve</a></li>
             <li><a href="./pages/about.html">About</a></li>
@@ -25,35 +24,34 @@
             <li class="right"><a class="login-link" href="./pages/login.html">Login</a></li>
         </ul>
     </nav>
-    <div id="title">
-        <h1 class="title font-title">Restaurant Pizzeria da Davide</h1>
-        <img src="/images/chef_white_iconB.png" alt="restaurant icon">
+    <div id="title-area">
+        <h1 id="title-text" class="title-font">Restaurant Pizzeria da Davide</h1>
+        <img src="/images/chef_white_icon.png" alt="restaurant icon" title="icon">
     </div>
-    <article class="brief-description-bottom">
-        <h4>The restaurant pizzeria da Davide, thanks to a ten-year experience in the area, welcomes its guests in a
-            pleasant and friendly environment to offer a contemporary, fresh and refined cuisine.</h4>
+    <article id="brief-description">
+        <h4>The Da Davide pizzeria restaurant welcomes its guests in a friendly environment to offer contemporary
+            cuisine. In addition to pizzas cooked in a wood oven. </h4>
+    </article>
+    <article id="big-menu-button">
+        <a href="./pages/menu.html">Let me see the Menu</a>
     </article>
     <!-- Slideshow container -->
     <main class="slideshow-container">
         <div class="single-slide fade">
-            <img src="./images/foodB/food1.png">
+            <img src="./images/foodS/food1.png" title="food 1" alt="food 1">
         </div>
         <div class="single-slide fade">
-            <img src="./images/foodB/food2.png">
+            <img src="./images/foodS/food2.png" title="food 2" alt="food 2">
         </div>
         <div class="single-slide fade">
-            <img src="./images/foodB/food3.png">
+            <img src="./images/foodS/food3.png" title="food 3" alt="food 3">
         </div>
         <div class="single-slide fade">
-            <img src="./images/foodB/food4.png">
+            <img src="./images/foodS/food4.png" title="food 4" alt="food 4">
         </div>
         <div class="single-slide fade">
-            <img src="./images/foodB/food5.png">
+            <img src="./images/foodS/food5.png" title="food 5" alt="food 5">
         </div>
-        <!-- Next and previous buttons -->
-        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-        <!-- The dots/circles -->
         <div class="dots">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
