@@ -32,12 +32,6 @@ body {
     background-color: yellow;
 }
 
-.slideshow-container{
-    position: relative;
-    top: 3em;
-    border: 2px yellow solid;/*REMOVE*/
-}
-
 #menu ul {
     list-style: none;
     margin: 0;
@@ -80,10 +74,12 @@ body {
 
 /*media queries for the navigation-bar*/
 @media (max-width: 600px) {
-
     #menu li.right,
     #menu li {
         float: none;
+    }
+    .dots{
+        display: none;
     }
 }
 
