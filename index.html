@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Restaurant da Davide</title>
-    <link rel="stylesheet" href="./style/common.css">
-    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="/style/common.css">
+    <link rel="stylesheet" href="/style/index.css">
     <link rel="icon" type="image/png" sizes="50x50" href="/images/chef_white_icon.png">
     <!-- icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,23 +17,22 @@
                 src="./images/arrowUp.png" alt="arrow Up"></button>
         <ul>
             <li><a class="active" href="./index.html">Home</a></li>
-            <li><a href="./kitchen.html">Kitchen</a></li>
-            <li><a href="./menu.html">Menu</a></li>
-            <li><a href="./book.html">Reserve</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contacts</a></li>
-            <li class="right"><a class="login-link" href="./login.html">Login</a></li>
+            <li><a href="./pages/kitchen.html">Kitchen</a></li>
+            <li><a href="./pages/menu.html">Menu</a></li>
+            <li><a href="./pages/book.html">Reserve</a></li>
+            <li><a href="./pages/about.html">About</a></li>
+            <li><a href="./pages/contact.html">Contacts</a></li>
+            <li class="right"><a class="login-link" href="./pages/login.html">Login</a></li>
         </ul>
     </nav>
-    <h1 class="title">Restaurant Pizzeria da Davide</h1>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum. <em>Add here a small descrpition.</em>
-    </p>
+    <div id="title">
+        <h1 class="title font-title">Restaurant Pizzeria da Davide</h1>
+        <img src="/images/chef_white_iconB.png" alt="restaurant icon">
+    </div>
+    <article class="brief-description-bottom">
+        <h4>The restaurant pizzeria da Davide, thanks to a ten-year experience in the area, welcomes its guests in a
+            pleasant and friendly environment to offer a contemporary, fresh and refined cuisine.</h4>
+    </article>
     <!-- Slideshow container -->
     <main class="slideshow-container">
         <div class="single-slide fade">
@@ -72,8 +71,8 @@
             <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
         </div>
     </footer>
-    <script src="./script/common.js"></script>
-    <script src="./script/index.js"></script>
+    <script src="/script/common.js"></script>
+    <script src="/script/index.js"></script>
 </body>
 
 </html>

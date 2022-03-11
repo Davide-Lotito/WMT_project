@@ -1,4 +1,5 @@
-var onTop = document.getElementById("back-on-top");
+
+let onTop = document.getElementById("back-on-top");
 
 window.onscroll = function () { scrollFunction() };
 
