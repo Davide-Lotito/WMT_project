@@ -71,7 +71,7 @@ body {
 }
 
 /*media queries for the navigation-bar*/
-@media (max-width: 600px) {
+@media (max-width: 620px) {
 
     #menu li.right,
     #menu li {
