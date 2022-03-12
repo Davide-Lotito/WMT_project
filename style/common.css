@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-size: 95%;
+    font-size: 100%;
     font-family: Verdana, sans-serif;
     font-family: "Zen Antique Soft";
     font-family: "Amatic SC";
@@ -16,20 +16,18 @@ body {
     display: none;
     position: fixed;
     bottom: 10%;
-    right: 4em;
     width: 5%;
     z-index: 99;
     outline: none;
-    background-color: yellowgreen;
-    opacity: 0.8;
+    background-color: rgb(13, 192, 236);
+    opacity: 0.7;
     cursor: pointer;
     padding: 1em;
     border: none;
-    border-radius: 100%;
 }
 
 #back-on-top:hover {
-    background-color: yellow;
+    background-color: rgb(8, 147, 240);
 }
 
 #menu ul {
@@ -43,7 +41,7 @@ body {
 
 #menu li {
     float: left;
-    font-size: x-large;
+    font-size: 2em;
 }
 
 #menu li a {
@@ -74,34 +72,36 @@ body {
 
 /*media queries for the navigation-bar*/
 @media (max-width: 600px) {
+
     #menu li.right,
     #menu li {
         float: none;
     }
-    .dots{
+
+    .dots {
         display: none;
     }
 }
 
-@font-face { 
-    font-family:"Zen Antique"; 
-    src:url("./fonts/Zen_Antique/ZenAntique-Regular.ttf") format("truetype");
-    font-weight: normal; 
-    font-style: normal; 
+@font-face {
+    font-family: "Zen Antique";
+    src: url("./fonts/Zen_Antique/ZenAntique-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
-@font-face { 
-    font-family:"Zen Antique Soft"; 
-    src:url("./fonts/Zen_Antique_Soft/ZenAntiqueSoft-Regular.ttf") format("truetype");
-    font-weight: normal; 
-    font-style: normal; 
+@font-face {
+    font-family: "Zen Antique Soft";
+    src: url("./fonts/Zen_Antique_Soft/ZenAntiqueSoft-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
-@font-face { 
-    font-family:"Amatic SC"; 
-    src:url("./fonts/Amatic_SC/AmaticSC-Regular.ttf") format("truetype");
-    font-weight: normal; 
-    font-style: normal; 
+@font-face {
+    font-family: "Amatic SC";
+    src: url("./fonts/Amatic_SC/AmaticSC-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 #footer {
@@ -117,7 +117,7 @@ body {
     padding-right: 1em;
 }
 
-#footer .social-links{
+#footer .social-links {
     text-align: right;
     position: absolute;
     top: 0;
@@ -156,4 +156,27 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.title-font {
+    font-size: 4em;
+    font-style: bold;
+}
+
+#title-area {
+    position: relative;
+    width: 80%;
+    left: 10%;
+}
+
+#title-text {
+    text-align: center;
+    margin-top: 0.3em;
+}
+
+#title-area img {
+    position: relative;
+    left: 40%;
+    padding-top: 1em;
+    max-width: 15%;
 }

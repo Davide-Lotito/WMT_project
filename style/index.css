@@ -127,25 +127,3 @@
   background-color: rgb(192, 192, 192);
   color: black;
 }
-
-.title-font{
-  font-size: 4em;
-  font-style: bold;
-}
-
-#title-area{
-  position: relative;
-  width: 60%;
-  left: 20%;
-}
-
-#title-text{
-  text-align: center;
-}
-
-#title-area img{
-  position: relative;
-  left: 40%;
-  padding-top: 1em;
-  max-width: 20%;
-}

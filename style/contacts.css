@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+  }
+
+.column {
+    width: 50%;
+    padding-top: 0.5em;
+    padding-left: 3em;
+    /* background-color: rgba(1, 51, 43, 0.384); */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#main-contacts h2{
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-large;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+}
+
+#main-contacts{
+    font-size: x-large;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+#column1 h4{
+    padding-left: 5em;
+}
+
+ul li{
+    list-style: none;
+    text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+    #column2 li{
+        float: none;
+    }
+}
