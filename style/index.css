@@ -1,10 +1,7 @@
 .slideshow-container {
-  position: relative;
-  left: 10%; 
-  top: 0;
+  margin: auto;
   width: 80%;
-  margin-top: 10%;
-  padding: 1em;
+  padding: 2em;
 }
 
 .single-slide {
@@ -114,7 +111,7 @@
   letter-spacing: 0.2em;
   font-size: 3em;
   font-weight: bold;
-  padding-top: 2em;
+  padding-top: 2em; padding-bottom: 2em;
   position: relative;
   width: 80%;
   left: 10%;
@@ -132,7 +129,6 @@
 }
 
 .title-font{
-  /* font-family: "Zen Antique";  */
   font-size: 4em;
   font-style: bold;
 }
