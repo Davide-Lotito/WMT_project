@@ -111,3 +111,25 @@
   background-color: rgb(192, 192, 192);
   color: black;
 }
+
+#alert-green-pass {
+  padding: 1%;
+  background-color: yellowgreen;
+  color: white;
+  font-size: 1em;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 3em;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+} 
