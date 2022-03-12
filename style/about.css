@@ -23,6 +23,39 @@
 }
 
 #bottom img{
+    position: relative;
     width: 30%;
     margin-top: 5%;
+}
+
+#bottom img{
+    position: relative;
+    width: 30%;
+    margin: 5%;
+}
+
+@media (max-width: 1000px) {
+    #up img{
+        float: none;
+        position: relative;
+        width: 80%;
+        left: 10%;
+    }
+    #up h4{
+        float: none;
+        position: relative;
+        width: 80%;
+        left: 10%;
+        text-align: center;
+    }
+    #bottom img{
+        display: none;
+    }
+    #bottom h4{
+        float: none;
+        position: relative;
+        width: 80%;
+        left: 10%;
+        text-align: center;
+    }
 }
