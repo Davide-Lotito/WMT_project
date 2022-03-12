@@ -1,11 +1,28 @@
-#about {
+.about {
     position: relative;
-    width: 60%;
-    left: 20%;
-    padding: 1em;
+    width: 80%;
+    left: 10%;
 }
 
-#about h4, h3{
+.about h4, h3{
     font-size: 2em;
     letter-spacing: 0.3em;
+}
+
+#up{
+    position: relative;
+    width: 80%;
+    left: 10%;
+}
+
+#bottom{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    padding-top: 0.1em;
+}
+
+#bottom img{
+    width: 30%;
+    margin-top: 5%;
 }
