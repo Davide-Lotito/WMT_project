@@ -1,7 +1,8 @@
 #form {
     position: relative;
     width: 50%;
-    left: 25%; right: 25%;
+    left: 25%;
+    right: 25%;
     background: #747474;
     padding: 2em;
     border-radius: 8px;
@@ -57,7 +58,8 @@
 #form input[type="submit"] {
     position: relative;
     width: 60%;
-    left: 20%; right: 20%;
+    left: 20%;
+    right: 20%;
     margin-top: 5%;
     padding: 19px 39px 18px 39px;
     color: #FFF;
@@ -81,6 +83,7 @@
         padding-top: 1em;
         padding-bottom: 0.5em;
     }
+
     #form input[type="submit"] {
         font-size: 1em;
     }

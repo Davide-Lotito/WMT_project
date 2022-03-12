@@ -214,3 +214,22 @@ span{
 .title-minor{
     color: #111;
 }
+
+#header-progress-bar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+#progress-bar-container {
+    width: 100%;
+    height: 8px;
+}
+
+#progress-bar{
+    height: 8px;
+    background: rgb(146, 148, 148);
+    opacity: 0.9;
+    width: 0%;
+}
