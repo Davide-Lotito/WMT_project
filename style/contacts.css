@@ -71,6 +71,19 @@ ul li{
 #inside1{
     position: relative;
     padding-bottom: 0.1em;
-    width: 50%;
-    left: 25%;
+    width: 50%; left: 25%;
+}
+
+#map{
+    float: none;
+    position: relative;
+    width: 80%; left: 10%;
+    padding: 2em;
+}
+
+#map-iframe{
+    position: relative;
+    width: 80%; left: 10%;
+    height: 30em;
+    border: none;
 }
