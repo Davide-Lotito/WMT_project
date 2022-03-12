@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/style/common.css">
+    <link rel="stylesheet" href="/style/book.css">
+    <link rel="stylesheet" href="/style/form.css">
     <link rel="icon" type="image/png" href="/images/chef_white_icon.png">
     <!-- icon libary -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Reserve</title>
 </head>
-<body> 
+
+<body>
     <nav id="menu">
-        <button onclick="topFunction()" id="back-on-top" title="back on top"><img class="center" src="./images/arrowUp.png" alt="arrow Up"></button>
+        <button onclick="topFunction()" id="back-on-top" title="back on top"><img class="center"
+                src="/images/arrowUp.png" alt="arrow Up"></button>
         <ul>
             <li><a href="/index.html">Home</a></li>
             <li><a href="./menu.html">Menu</a></li>
@@ -25,8 +30,26 @@
         <a href="/index.html"><img src="/images/chef_white_icon.png" alt="restaurant icon" title="icon"></a>
         <h1 id="title-text" class="title-font">Restaurant Pizzeria da Davide</h1>
     </div>
-    <br><br><br>
-    <h1 style="margin: auto; text-align: center;">Customers can book one/more tables</h1>
+    <!--reservation form-->
+    <div id="form">
+        <form>
+            <fieldset>
+                <legend><span class="number">1</span>General Info</legend>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                <input type="date" id="date" name="date">
+                <input type="time" id="time" name="time" placeholder="When you intend to arrive">
+                <input type="number" id="quantity" name="quantity" placeholder="How many people">
+            </fieldset>
+            <fieldset>
+                <legend><span class="number">2</span> Additional Info</legend>
+                <textarea name="allergies" placeholder="Add any food allergies"></textarea>
+            </fieldset>
+            <input type="submit" value="Apply"/>
+        </form>
+    </div>
+
+
     <footer id="footer">
         &copy; Restaurant da Davide - 2022
         <br>
@@ -38,4 +61,5 @@
     </footer>
     <script src="/script/common.js"></script>
 </body>
+
 </html>

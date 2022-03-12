@@ -1,0 +1,31 @@
+#form-book{
+    position: relative;
+    width: 50%;
+    left: 25%;
+    font-size: xx-large;
+    padding: 2em;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+#form-book label{
+    padding: 2em;
+    margin: auto;
+}
+
+#form-book input label{
+    position: relative;
+    width: 25%;
+    left: 50%;
+    padding: 0.1em;
+    margin: auto;
+    background-color: darkgrey;
+    font-size: x-large;
+}
+
+#submit{
+    position: relative;
+    width: 20%;
+    left: 40%;
+    background-color: grey;
+}
