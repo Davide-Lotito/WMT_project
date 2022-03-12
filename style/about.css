@@ -1,0 +1,11 @@
+#about {
+    position: relative;
+    width: 60%;
+    left: 20%;
+    padding: 1em;
+}
+
+#about h4, h3{
+    font-size: 2em;
+    letter-spacing: 0.3em;
+}

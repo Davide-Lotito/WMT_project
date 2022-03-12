@@ -160,6 +160,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    text-align: center;
 }
 
 .title-font {
@@ -183,4 +184,30 @@ body {
     left: 40%;
     padding-top: 1em;
     max-width: 15%;
+}
+
+.name{
+    font-style: italic;
+    font-weight: bold;
+}
+
+span{
+    font-size: 1.7em;
+    letter-spacing: 0.1em;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.right-float{
+    float: right;
+    width: 60%;
+}
+  
+  .left-float{
+    float: left;
+    width: 40%;
 }
