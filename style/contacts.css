@@ -1,12 +1,11 @@
 * {
     box-sizing: border-box;
-  }
+}
 
 .column {
     width: 50%;
     padding-top: 0.5em;
     padding-left: 3em;
-    /* background-color: rgba(1, 51, 43, 0.384); */
 }
 
 .row:after {
@@ -16,9 +15,10 @@
 }
 
 #main-contacts h2{
-    font-weight: bold;
+    margin: auto;
     text-align: center;
     font-size: xx-large;
+    border: 2px black solid;
 }
 
 img{
@@ -50,5 +50,20 @@ ul li{
 @media (max-width: 1200px) {
     #column2 li{
         float: none;
+    }
+}
+
+@media (max-width: 900px) {
+    #column1{
+        float: none;
+        position: relative;
+        width: 80%;
+        text-align: center;
+    }
+    #column2{
+        float: none;
+        position: relative;
+        width: 80%;
+        text-align: center;
     }
 }

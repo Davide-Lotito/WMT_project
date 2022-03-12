@@ -81,6 +81,10 @@ body {
     .dots {
         display: none;
     }
+
+    #login-page{
+        display: none;
+    }
 }
 
 @font-face {
