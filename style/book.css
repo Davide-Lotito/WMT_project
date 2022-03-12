@@ -88,3 +88,42 @@
         font-size: 1em;
     }
 }
+
+/* Callout box - fixed position at the bottom of the page */
+#callout-timetable {
+    position: fixed;
+    bottom: 35px;
+    right: 20px;
+    margin-left: 20px;
+    max-width: 300px;
+}
+
+.callout-header {
+    padding: 15% 5%;
+    background: #555;
+    font-size: 1.7em;
+    color: white;
+}
+
+.callout-container {
+    padding-right: 1.5em;
+    padding-top: 0.1em;
+    padding-bottom: 0.5em;
+    padding-left: 0.1em;
+    background-color: #ccc;
+    font-size: 1.1em;
+    color: black
+}
+
+.closebtn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: black;
+}
