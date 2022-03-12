@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/style/common.css">
     <link rel="stylesheet" href="/style/book.css">
-    <link rel="stylesheet" href="/style/form.css">
     <link rel="icon" type="image/png" href="/images/chef_white_icon.png">
     <!-- icon libary -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,6 +30,7 @@
         <h1 id="title-text" class="title-font">Restaurant Pizzeria da Davide</h1>
     </div>
     <!--reservation form-->
+    <!--the inspiration for this style of the form was taken from https://www.sanwebe.com/2014/08/css-html-forms-designs-->
     <div id="form">
         <form>
             <fieldset>
@@ -42,10 +42,10 @@
                 <input type="number" id="quantity" name="quantity" placeholder="How many people">
             </fieldset>
             <fieldset>
-                <legend><span class="number">2</span> Additional Info</legend>
+                <legend><span class="number">2</span class="replaced"> Additional Info</legend>
                 <textarea name="allergies" placeholder="Add any food allergies"></textarea>
             </fieldset>
-            <input type="submit" value="Apply"/>
+            <input type="submit" value="Apply" />
         </form>
     </div>
 

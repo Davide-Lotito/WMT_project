@@ -1,31 +1,87 @@
-#form-book{
+#form {
     position: relative;
     width: 50%;
-    left: 25%;
+    left: 25%; right: 25%;
+    background: #747474;
+    padding: 2em;
+    border-radius: 8px;
+    color: black;
+}
+
+#form fieldset {
+    border: none;
+}
+
+#form legend {
     font-size: xx-large;
-    padding: 2em;
-    border: 2px solid black;
-    border-radius: 5%;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
 }
 
-#form-book label{
-    padding: 2em;
-    margin: auto;
+#form input[type="text"],
+#form input[type="date"],
+#form input[type="tel"],
+#form input[type="number"],
+#form input[type="time"],
+#form textarea {
+    font-family: "Amatic SC";
+    background: rgba(255, 255, 255, .1);
+    font-size: larger;
+    width: 100%;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    color: #464646;
+    margin-bottom: 1.3em;
 }
 
-#form-book input label{
+#form input[type="text"]:focus,
+#form input[type="date"]:focus,
+#form input[type="number"]:focus,
+#form input[type="time"]:focus,
+#form textarea:focus {
+    background: #d2d9dd;
+}
+
+#form .number {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 0.5em;
+    text-align: center;
+    border-radius: 15px 15px 15px 0px;
+}
+
+#form input[type="submit"] {
     position: relative;
-    width: 25%;
-    left: 50%;
-    padding: 0.1em;
-    margin: auto;
-    background-color: darkgrey;
-    font-size: x-large;
+    width: 60%;
+    left: 20%; right: 20%;
+    margin-top: 5%;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background: #1abc9c;
+    font-family: "Amatic SC";
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #16a085;
+    border-radius: 8px;
+    letter-spacing: 0.3em;
 }
 
-#submit{
-    position: relative;
-    width: 20%;
-    left: 40%;
-    background-color: grey;
+#form input[type="submit"]:hover {
+    background: #109177;
+}
+
+@media (max-width: 500px) {
+    #form legend {
+        font-size: x-large;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+    }
+    #form input[type="submit"] {
+        font-size: 1em;
+    }
 }
