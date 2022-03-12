@@ -4,8 +4,9 @@
 
 .column {
     width: 50%;
-    padding-top: 0.5em;
+    /* padding-top: 0.5em; */
     padding-left: 3em;
+    padding-right: 3em;
 }
 
 .row:after {
@@ -18,17 +19,21 @@
     margin: auto;
     text-align: center;
     font-size: xx-large;
-    padding: 2em;
+    padding-top: 2em;
+    padding-bottom: 0;
 }
 
 #main-contacts img{
-    width: 60px;
-    height: 60px;
-    padding-bottom: 1em;
+    width: 40px;
+    height: 40px;
+    margin-right: 1em;
+    /* margin-bottom: 0.5em; */
 }
 
 #main-contacts{
     font-size: x-large;
+    margin: auto;
+    width: 90%;
 }
 
 .float-left{
@@ -39,8 +44,8 @@
     float: right;
 }
 
-#column1 h4{
-    padding-left: 5em;
+.inline{
+    display: inline-block;
 }
 
 ul li{
@@ -48,24 +53,54 @@ ul li{
     text-decoration: none;
 }
 
-@media (max-width: 1200px) {
-    #column2 li{
+@media (max-width: 900px) {
+    #column1 ul{
         float: none;
     }
-}
-
-@media (max-width: 900px) {
+    #column2 ul{
+        float: none;
+    }
     #column1{
         float: none;
         position: relative;
-        width: 80%;
-        text-align: center;
+        width: 100%;
+        font-size: smaller;
+        text-align: justify;
+        padding: 0; border: 0;
+    }
+    #column1 h2{
+        position: relative;
+        padding: 1em;
+    }
+    #column1 li{
+        float: none;
+        position: relative;
+        margin: 0; padding: 0;
+        left: 0; right: 0;
+        width: 100%;
+    }
+    #column1 li img{
+        position: relative;
+        left: 0;
+    }
+    #column1 label{
+        margin: 0; padding: 0;
+        width: fit-content;
+    }
+    #column2 li img{
+        position: relative;
+        width: 50%;
+    }
+    #column2 ul{
+        column-count: 3;
     }
     #column2{
         float: none;
         position: relative;
         width: 80%;
+        left: 10%;
         text-align: center;
+        border: 1px black solid;
     }
 }
 
@@ -87,4 +122,9 @@ ul li{
     width: 80%; left: 10%;
     height: 30em;
     border: none;
+}
+
+#list-hours h4{
+    padding-left: 1em;
+    padding-right: 1em;
 }
