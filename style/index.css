@@ -63,16 +63,25 @@
   padding: 1em;
 }
 
-#brief-description img{
+#brief-description h4{
+  font-size: 2em;
+  letter-spacing: 0.3em;
+}
+
+.right-float{
   float: right;
   width: 60%;
 }
 
-#brief-description h4{
+.left-float{
   float: left;
   width: 40%;
-  font-size: 2em;
-  letter-spacing: 0.3em;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*media queries for the brief-description*/
@@ -83,12 +92,14 @@
 }
 
 /*media queries for the brief-description*/
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   #brief-description h4{
     float: none;
     position: relative;
+    text-align: center;
     left: 20%;
     width: 60%;
+    padding-top: 0;
   }
   #brief-description img{
     float: none;
@@ -99,15 +110,14 @@
 }
 
 #big-menu-button{
-  position: relative;
-  top: 3em; bottom: 100px;
   text-align: center;
-  padding: 0.1em;
-  letter-spacing: 0.1em;
-  font-size: xx-large;
+  letter-spacing: 0.2em;
+  font-size: 3em;
   font-weight: bold;
-  margin: auto;
-  width: 30%;
+  padding-top: 2em;
+  position: relative;
+  width: 80%;
+  left: 10%;
 }
 
 #big-menu-button a{
