@@ -1,12 +1,10 @@
-function empty(inputtx) 
-{
-  if (inputtx.value.length == 0)
-   { 
-    //   alert("empty field");  	
-      return false; 
-   }  	
-   return true; 
-} 
+function empty(inputtx) {
+    if (inputtx.value.length == 0) {
+        //alert("empty field");  	
+        return false;
+    }
+    return true;
+}
 
 function checkDateTime() {
     let dateO = document.getElementById("date");
@@ -23,7 +21,7 @@ function checkDateTime() {
     // if (day == "" || year == "" || day == "") {
     //     return true;
     // }
-    if(empty(date)){
+    if (empty(date)) {
         return false;
     }
 
@@ -62,21 +60,21 @@ function checkTime() {
     let currentHours = currentDate.getHours();
     let currentMinutes = currentDate.getMinutes();
     let currentTime = `${currentHours}:${currentMinutes}`;
-    
-    let hours = time.slice(0,2);
+
+    let hours = time.slice(0, 2);
     let minutes = time.slice(2);
 
     // if (time == "") {
     //     return null;
     // }
-    if(empty(time)){
+    if (empty(time)) {
         return false;
     }
 
-    if (hours - currentHours >= 0){
+    if (hours - currentHours >= 0) {
         // console.log("Time is ok");
-        if(hours == currentHours){
-            if(minutes > currentMinutes){
+        if (hours == currentHours) {
+            if (minutes > currentMinutes) {
                 // console.log("Time is ok");
                 return true;
             } else {
@@ -91,8 +89,8 @@ function checkTime() {
 }
 
 submitButton = document.getElementById("submit-button")
-submitButton.onsubmit = function(){
-    if(checkDateTime()){
+submitButton.onsubmit = function () {
+    if (checkDateTime()) {
         alert("valid")
         return 1;
     }

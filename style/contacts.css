@@ -139,3 +139,11 @@ ul li{
     padding-left: 1em;
     padding-right: 1em;
 }
+
+#footer .fa{
+    box-sizing: unset;
+    padding: 0.5em;
+    width: 1em; height: 1em;
+    text-decoration: none;
+    margin-top: 0.7em;
+}
