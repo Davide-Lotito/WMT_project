@@ -117,6 +117,12 @@
   background-color: yellowgreen;
   color: white;
   font-size: 1em;
+  letter-spacing: 0.1em;
+}
+
+#alert-green-pass strong{
+  color: red;
+  font-size: 1.5em;
 }
 
 .closebtn {
