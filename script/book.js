@@ -89,12 +89,22 @@ function checkTime() {
 }
 
 submitButton = document.getElementById("submit-button")
-submitButton.onsubmit = function () {
-    if (checkDateTime()) {
-        alert("valid")
-        return 1;
-    }
-    alert("invalid");
-    return 0;
-    // console.log("ciao");
-}
+nameButton = document.getElementById("name")
+
+nameButton.addEventListener("click", ()=>{
+    console.log('ciao');
+})
+
+submitButton.addEventListener("mouseover", ()=>{
+    console.log('ciao');
+})
+
+// submitButton.onmouseover = function () {
+//     // if (checkDateTime()) {
+//     //     alert("valid")
+//     //     return 1;
+//     // }
+//     // alert("invalid");
+//     // return 0;
+//     console.log('ciao');
+// }
