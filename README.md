@@ -8,8 +8,16 @@
 This is the exam project for the Web and Multimedia Technology universitary course. The goal is to create a website from scratch, using only ***DHTML*** for the front end. In addition to the interaction with a database via ***PhP***. <br>
 All the images used in the webiste are taken from <a href="https://unsplash.com/">https://unsplash.com/</a>
 
-## Context
-It consists of a website ***for a Restaurant*** <img src="https://media.giphy.com/media/fuDNg9Fh84Yqst9Cps/giphy.gif" width="30">
+---
+
+<div align="center">
+  <h3>A website for a Restaurant <img src="https://media.giphy.com/media/c1gIjJ3VQSx4Lu8l3g/giphy.gif" width="30"></h3>
+</div>
+
+
+<div align="center">
+  <img src="https://github.com/Davide-Lotito/WMT_project/blob/main/images/chef_white_icon.png" alt="restaurant logo"/>
+</div>
 
 
 
