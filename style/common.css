@@ -56,12 +56,10 @@ body {
     background-color: #111;
 }
 
-/*the active link*/
 #menu ul li a.active {
     background-color: goldenrod;
 }
 
-/*the login link*/
 #menu ul li a.login-link {
     background-color: red;
 }
@@ -171,7 +169,7 @@ body {
 
 .title-font {
     font-size: 4em;
-    font-style: bold;
+    font-weight: bold;
 }
 
 #title-area {
