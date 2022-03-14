@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style/common.css">
-    <link rel="stylesheet" href="/style/book.css">
-    <link rel="icon" type="image/png" href="/images/chef_white_icon.png">
+    <link rel="stylesheet" href="../style/common.css">
+    <link rel="stylesheet" href="../style/book.css">
+    <link rel="icon" type="image/png" href="../images/chef_white_icon.png">
     <!-- icon libary -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Reserve</title>
@@ -14,9 +14,9 @@
 <body>
     <nav id="menu">
         <button onclick="topFunction()" id="back-on-top" title="back on top"><img class="center"
-                src="/images/arrowUp.png" alt="arrow Up"></button>
+                src="../images/arrowUp.png" alt="arrow Up"></button>
         <ul>
-            <li><a href="/index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="./menu.html">Menu</a></li>
             <li><a class="active" href="./book.html">Reserve</a></li>
             <li><a href="./about.html">About</a></li>
@@ -32,7 +32,7 @@
       </div>
     <!--title box area-->
     <div id="title-area">
-        <a href="/index.html"><img src="/images/chef_white_icon.png" alt="restaurant icon" title="icon"></a>
+        <a href="../index.html"><img src="../images/chef_white_icon.png" alt="restaurant icon" title="icon"></a>
         <h1 id="title-text" class="title-font">Restaurant Pizzeria da Davide</h1>
     </div>
     <!--reservation form-->
@@ -41,14 +41,14 @@
         <form>
             <fieldset>
                 <legend><span class="number">1</span>General Info</legend>
-                <input type="text" id="name" name="name" placeholder="Your Name">
-                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
-                <input type="date" id="date" name="date">
-                <input type="time" id="time" name="time" placeholder="When you intend to arrive">
-                <input type="number" id="quantity" name="quantity" placeholder="How many people">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                <input type="date" id="date" name="date" required>
+                <input type="time" id="time" name="time" title="When itend to arrive" required>
+                <input type="number" id="quantity" name="quantity" placeholder="How many people" required>
             </fieldset>
             <fieldset>
-                <legend><span class="number">2</span class="replaced"> Additional Info</legend>
+                <legend><span class="number replaced">2</span> Additional Info</legend>
                 <textarea name="allergies" placeholder="Add any food allergies"></textarea>
             </fieldset>
             <input type="submit" id="submit-button" value="Apply" />
@@ -58,10 +58,9 @@
         <div class="callout-header">Opening hours</div>
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <div class="callout-container">
-          <p>
             <ul>
                 <li>
-                    <h4>Monday&nbsp;&nbsp-&nbsp;&nbspFriday</h4>
+                    <h4>Monday&nbsp;&nbsp;-&nbsp;&nbsp;Friday</h4>
                     <ul>
                         <li>12:00 - 15:00</li>
                         <li>19:00 - 23:00</li>
@@ -75,27 +74,26 @@
                     </ul>
                 </li>
                 <li>
-                    <h4>Sunday&nbsp;&nbsp&&nbsp;&nbspHB</h4>
+                    <h4>Sunday&nbsp;&nbsp;&&nbsp;&nbsp;HB</h4>
                     <ul>
                         <li>12:00 - 17:00</li>
                         <li>19:00 - 00:00</li>
                     </ul>
                 </li>
             </ul>
-          </p>
         </div>
       </div> 
     <footer id="footer">
         &copy; Copyright 2022 - Da Davide Restaurant - All rights reserved.
         <br>
         <div class="social-links">
-            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-            <a href="https://www.twitter.com/" class="fa fa-twitter"></a>
-            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.twitter.com/" class="fa fa-twitter" target="_blank"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
         </div>
     </footer>
-    <script src="/script/common.js"></script>
-    <script src="/script/book.js"></script>
+    <script src="../script/common.js"></script>
+    <script src="../script/book.js"></script>
 </body>
 
 </html>

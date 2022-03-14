@@ -34,6 +34,7 @@
     margin: 5%;
 }
 
+/*media queries fot layout*/
 @media (max-width: 1000px) {
     #up img{
         float: none;

@@ -5,10 +5,10 @@ body {
     font-family: Verdana, sans-serif;
     font-family: "Zen Antique Soft";
     font-family: "Amatic SC";
+    font-family: "Indie Flower";
     color: white;
     background-color: black;
     background-color: darkslategrey;
-    /* background-image: url("/images/background.png"); */
     background-repeat: no-repeat;
 }
 
@@ -85,6 +85,13 @@ body {
     #login-page{
         display: none;
     }
+}
+
+@font-face {
+    font-family: "Indie Flower";
+    src: url("./fonts/Indie_Flower/IndieFlower-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
@@ -188,6 +195,7 @@ body {
 .name{
     font-style: italic;
     font-weight: bold;
+    color: #111;
 }
 
 span{

@@ -8,18 +8,19 @@
   display: none;
 }
 
-.single-slide img{
-    width: 100%;
-    height: 50%;
+.single-slide img {
+  position: relative;
+  left: 15%; right: 15%;
+  width: 70%;
+  height: 50%;
 }
 
-.dots{
-    text-align: center;
-    margin: auto;
-    margin-top: 2em;
+.dots {
+  text-align: center;
+  margin: auto;
+  margin-top: 2em;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 10px;
@@ -35,7 +36,6 @@
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -44,37 +44,47 @@
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
-#brief-description{
+#brief-description {
   position: relative;
   width: 80%;
   left: 10%;
   padding: 1em;
 }
 
-#brief-description h4{
+#brief-description h4 {
   font-size: 2em;
   letter-spacing: 0.3em;
 }
 
 /*media queries for the brief-description*/
 @media (max-width: 1100px) {
-  #brief-description h4{
+  #brief-description h4 {
     font-size: 1.5em;
   }
 }
 
 /*media queries for the brief-description*/
 @media (max-width: 800px) {
-  #brief-description h4{
+  #brief-description h4 {
     float: none;
     position: relative;
     text-align: center;
@@ -82,7 +92,8 @@
     width: 60%;
     padding-top: 0;
   }
-  #brief-description img{
+
+  #brief-description img {
     float: none;
     position: relative;
     left: 10%;
@@ -90,18 +101,19 @@
   }
 }
 
-#big-menu-button{
+#big-menu-button {
   text-align: center;
   letter-spacing: 0.2em;
   font-size: 3em;
   font-weight: bold;
-  padding-top: 2em; padding-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   position: relative;
   width: 80%;
   left: 10%;
 }
 
-#big-menu-button a{
+#big-menu-button a {
   text-decoration: none;
   background-color: black;
   color: white;
@@ -115,12 +127,12 @@
 #alert-green-pass {
   padding: 1%;
   background-color: yellowgreen;
-  color: white;
+  color: black;
   font-size: 1em;
   letter-spacing: 0.1em;
 }
 
-#alert-green-pass strong{
+#alert-green-pass strong {
   color: red;
   font-size: 1.5em;
 }
@@ -138,4 +150,4 @@
 
 .closebtn:hover {
   color: black;
-} 
+}
