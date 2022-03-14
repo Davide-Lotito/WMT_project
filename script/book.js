@@ -1,7 +1,7 @@
 /**
  * Check if is empty
  * @param {*} inputtx 
- * @returns 
+ * @returns true if is not empty
  */
 function empty(inputtx) {
     if (inputtx.value.length == 0) {
@@ -9,6 +9,21 @@ function empty(inputtx) {
         return false;
     }
     return true;
+}
+
+/**
+ * Get the name of the day
+ * @param {*} dateStr 
+ * @param {*} locale 
+ * @returns the day's name
+ * 
+ * https://stackoverflow.com/questions/24998624/day-name-from-date-in-js
+ * 
+ */
+function getDayName(dateStr, locale)
+{
+    let date = new Date(dateStr);
+    return date.toLocaleDateString(locale, { weekday: 'long' });        
 }
 
 /**
@@ -39,7 +54,8 @@ function checkDate() {
     let month = date.slice(5, 7);
     let year = date.slice(0, 4);
 
-    
+    dayName = getDayName(date, "en");
+
     if (year >= currentYear) {
         if(year == currentYear){
             if (month >= currentMonth) {
@@ -111,9 +127,11 @@ function checkTime() {
     }
 }
 
+//----------------------- GLOBAL VARIABLES ----------------------- //
+let today = false; //is the booking is today
+let dayName;
 
 // ---------------------- EVENTS HANDLING ------------------------ //
-let today = false; //is the booking is today
 submitButton = document.getElementById("submit-button");
 formBook = document.getElementById("form");
 dateButton = document.getElementById("date");
@@ -121,6 +139,7 @@ timeButton = document.getElementById("time");
 
 dateButton.addEventListener("change", ()=>{
     checkDate();
+    // console.log("The name of the day is: ", dayName);
 })
 
 timeButton.addEventListener("focusout", ()=>{
