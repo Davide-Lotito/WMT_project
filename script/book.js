@@ -1,3 +1,8 @@
+/**
+ * Check if is empty
+ * @param {*} inputtx 
+ * @returns 
+ */
 function empty(inputtx) {
     if (inputtx.value.length == 0) {
         //alert("empty field");  	
@@ -6,7 +11,23 @@ function empty(inputtx) {
     return true;
 }
 
-function checkDateTime() {
+/**
+ * Get the name of a month
+ * @param {*} month 
+ * @returns 
+ */
+function getMonthName(month){
+    const d = new Date();
+    d.setMonth(month-1);
+    const monthName = d.toLocaleString("en-US", {month: "long"});
+    return monthName;
+}
+
+/**
+ * Check if a date is valid, not in the past
+ * @returns true if the date is valid
+ */
+function checkDate() {
     let dateO = document.getElementById("date");
     let date = dateO.value;
     let currentDate = new Date();
@@ -21,31 +42,35 @@ function checkDateTime() {
     // if (day == "" || year == "" || day == "") {
     //     return true;
     // }
-    if (empty(date)) {
-        return false;
-    }
 
-    if (year - currentYear >= 0) {
-        // console.log("Year is ok");
-        if (month >= currentMonth) {
-            // console.log("Month is ok");
-            if (month == currentMonth) {
-                if (day >= currentDay) {
-                    // console.log("It is ok");
-                    checkTime();
-                } else {
-                    alert("Invalid Date --> invalid day");
-                    dateO.value = "";
-                    return false;
+    if (year >= currentYear) {
+        if(year == currentYear){
+            if (month >= currentMonth) {
+                if (month == currentMonth) {
+                    if (day >= currentDay) {
+                        if (day == currentDay) {
+                            console.log(`The reservation is today (${date})`);
+                            today = true;
+                            return true;
+                        }
+                        console.log(`The reservation is in the next days (${day})`);
+                        return true;
+                    } else {
+                        alert("Invalid Date --> invalid day");
+                        dateO.value = "";
+                        return false;
+                    }
                 }
+                console.log(`The reservation is in the next months (${getMonthName(month)})`);
+                return true;
+            } else {
+                alert("Invalid Date --> invalid month");
+                dateO.value = "";
+                return false;
             }
-            // console.log("It is ok");
-            checkTime();
-        } else {
-            alert("Invalid Date --> invalid month");
-            dateO.value = "";
-            return false;
         }
+        
+        return true;
     } else {
         alert("Invalid Date --> invalid year");
         dateO.value = "";
@@ -53,58 +78,67 @@ function checkDateTime() {
     }
 }
 
+/**
+ * Support the checkDate() funcition, checks if the time is correct
+ * @returns true if the time is valid
+ */
 function checkTime() {
     let timeO = document.getElementById("time");
     let time = timeO.value;
     let currentDate = new Date();
     let currentHours = currentDate.getHours();
     let currentMinutes = currentDate.getMinutes();
-    let currentTime = `${currentHours}:${currentMinutes}`;
+    // let currentTime = `${currentHours}:${currentMinutes}`;
 
     let hours = time.slice(0, 2);
-    let minutes = time.slice(2);
+    let minutes = time.slice(3);
 
     // if (time == "") {
     //     return null;
     // }
-    if (empty(time)) {
-        return false;
-    }
 
-    if (hours - currentHours >= 0) {
-        // console.log("Time is ok");
+    if (hours >= currentHours) {
         if (hours == currentHours) {
-            if (minutes > currentMinutes) {
-                // console.log("Time is ok");
+            if (minutes >= currentMinutes) {
+                console.log(`The reservation is today at the ${time}`);
                 return true;
             } else {
                 alert("Invalid Time --> hours");
+                // timeO.value = "";
                 return false;
             }
         }
+        console.log(`The reservation is today at the ${time}`);
+        return true;
     } else {
         alert("Invalid Time --> hours");
+        // timeO.value = "";
         return false;
     }
 }
 
-submitButton = document.getElementById("submit-button")
-nameButton = document.getElementById("name")
 
-nameButton.addEventListener("click", ()=>{
-    console.log('ciao');
-})
+// ---------------------- EVENTS HANDLING ------------------------ //
+let today = false; //is the booking is today
+submitButton = document.getElementById("submit-button");
+formBook = document.getElementById("form");
+dateButton = document.getElementById("date");
+timeButton = document.getElementById("time");
 
-submitButton.addEventListener("mouseover", ()=>{
-    console.log('ciao');
-})
+// submitButton.addEventListener("click", ()=>{
+//     checkDate();
+// })
 
-// submitButton.onmouseover = function () {
-//     // if (checkDateTime()) {
-//     //     alert("valid")
-//     //     return 1;
-//     // }
-//     // alert("invalid");
-//     // return 0;
-//     console.log('ciao');
-// }
+// formBook.addEventListener("submit", ()=>{
+//     checkDate();
+// })
+
+dateButton.onchange = function(){
+    checkDate();
+};
+
+timeButton.onchange = function(){
+    if(today){
+        checkTime();
+    }
+};
