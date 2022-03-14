@@ -37,9 +37,7 @@ function getMonthName(month) {
  * Check if a date is valid, not in the past
  * @returns true if the date is valid
  */
-function checkDate() {
-    dateO = document.getElementById("date");
-    date = dateO.value;
+function checkDate(date, dateO) {
     let currentDate = new Date();
     let currentDay = currentDate.getDate();
     let currentMonth = currentDate.getMonth() + 1;
@@ -205,10 +203,6 @@ function timeCorrection(time, timeO){
 }
 
 //----------------------- GLOBAL VARIABLES ----------------------- //
-let dateO;//object date, inserted by user
-let date;
-// let timeO;//object time, inserted by user
-// let time;
 let today = false; //if the booking is today
 let dayName;
 const WEEKTIMES = new Map([
@@ -237,7 +231,9 @@ dateButton = document.getElementById("date");
 timeButton = document.getElementById("time");
 
 dateButton.addEventListener("change", () => {
-    checkDate();
+    const dateO = document.getElementById("date");
+    let date = dateO.value;
+    checkDate(date, dateO);
 })
 
 timeButton.addEventListener("focusout", () => {
