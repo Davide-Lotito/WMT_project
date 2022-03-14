@@ -5,6 +5,8 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 
-This is the exam project for the Web and Multimedia Technology universitary course. It consists of a website, a website for a Restaurant.
+This is the exam project for the Web and Multimedia Technology universitary course. 
+
+It consists of a website ***for a Restaurant***.
 
 All the images used in the webiste are taken from <a href="https://unsplash.com/">https://unsplash.com/</a>
