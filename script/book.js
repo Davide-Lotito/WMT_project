@@ -137,8 +137,9 @@ dateButton.onchange = function(){
     checkDate();
 };
 
-timeButton.onchange = function(){
-    if(today){
-        checkTime();
-    }
+timeButton.onfocusout = function(){
+    console.log('focus out');
+    // if(today){
+    //     checkTime();
+    // }
 };
