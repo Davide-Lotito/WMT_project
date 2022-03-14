@@ -1,14 +1,10 @@
 /**
  * Check if is empty
- * @param {*} inputtx 
+ * @param {*} input
  * @returns true if is not empty
  */
-function empty(inputtx) {
-    if (inputtx.value.length == 0) {
-        //alert("empty field");  	
-        return false;
-    }
-    return true;
+function empty(input) {
+    return (input == "") ? false : true;
 }
 
 /**
@@ -53,6 +49,10 @@ function checkDate() {
     let month = date.slice(5, 7);
     let year = date.slice(0, 4);
 
+    if(!empty(date)){
+        return true;
+    }
+
     dayName = getDayName(date, "en");
 
     if (year >= currentYear) {
@@ -94,7 +94,7 @@ function checkDate() {
  * Support the checkDate() funcition, checks if the time is correct
  * @returns true if the time is valid
  */
-function checkTime() {
+function checkTime(time, timeO) {
     let currentDate = new Date();
     let currentHours = currentDate.getHours();
     let currentMinutes = currentDate.getMinutes();
@@ -103,6 +103,9 @@ function checkTime() {
     let hours = getHoursMinutes(time)[0];
     let minutes = getHoursMinutes(time)[1];
 
+    if(!empty(time)){
+        return true;
+    }
 
     if (hours >= currentHours) {
         if (hours == currentHours) {
@@ -131,11 +134,15 @@ function getHoursMinutes(time) {
 }
 
 /**
- * Check if the time inserted by the user, is consistent with the opening hours
- * @param {} dayName 
+ * Check if the time inserted by the user, is consistent with the booking hours
  * @returns true if the time is consistent
  */
-function checkDayHour() {
+function checkDayHour(time, timeO) {
+
+    if(!empty(time)){
+        return true;
+    }
+    
     let result;
     function checks(map) {
         let hour = getHoursMinutes(time)[0];
@@ -146,7 +153,7 @@ function checkDayHour() {
             return (hour >= map.get("evening-start") && hour < map.get("evening-end"));
         }
     }
-
+    
     switch (dayName) {
         case "Sunday":
             result = checks(SUNTIMES);
@@ -174,18 +181,34 @@ function checkDayHour() {
         console.log(`Time consistent with the resturant's schedule (${getHoursMinutes(time)[0]})`);
         return true;
     } else {
-        alert(`Time is -not- consistent with the resturant's schdule`);
+        alert(`Time is -not- consistent with the resturant's schedule`);
         timeO.value = "";
         return false;
     }
 
 }
 
+/**
+ * Round times, reservations can only be made every THRESHOLD minutes
+ */
+function timeCorrection(time, timeO){
+    let minuteI = getHoursMinutes(time)[1];
+    let hourI = getHoursMinutes(time)[0];
+    for(let i = 0; i < 60/THRESHOLD; i++){
+        if (minuteI > THRESHOLD*i && minuteI < THRESHOLD*(i+1)) {
+            let a = (i == 0) ? "0" : "";
+            // let b = ((THRESHOLD*(i+1) - minuteI) < Math.round((i+1)*THRESHOLD/2)) ? 1 : 0;
+            // timeO.value = `${hourI}:${a+((i+b)*THRESHOLD)}`;
+            timeO.value = `${hourI}:${a+i*THRESHOLD}`;
+        }
+    }
+}
+
 //----------------------- GLOBAL VARIABLES ----------------------- //
 let dateO;//object date, inserted by user
 let date;
-let timeO;//object time, inserted by user
-let time;
+// let timeO;//object time, inserted by user
+// let time;
 let today = false; //if the booking is today
 let dayName;
 const WEEKTIMES = new Map([
@@ -206,7 +229,7 @@ const SUNTIMES = new Map([
     ["evening-start", 19],
     ["evening-end", 23]
 ]);
-
+const THRESHOLD = 15;
 // ---------------------- EVENTS HANDLING ------------------------ //
 submitButton = document.getElementById("submit-button");
 formBook = document.getElementById("form");
@@ -215,15 +238,17 @@ timeButton = document.getElementById("time");
 
 dateButton.addEventListener("change", () => {
     checkDate();
-    // console.log("The name of the day is: ", dayName);
 })
 
 timeButton.addEventListener("focusout", () => {
-    timeO = document.getElementById("time");
-    time = timeO.value;
+    const timeO = document.getElementById("time");
+    let time = timeO.value;
     if (today) {
-        checkTime();
+        checkTime(time,timeO);
         today = false;
     }
-    checkDayHour();
+    if (checkDayHour(time, timeO)){
+        timeCorrection(time, timeO);
+    }
+   
 });
