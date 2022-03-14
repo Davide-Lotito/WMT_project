@@ -39,10 +39,7 @@ function checkDate() {
     let month = date.slice(5, 7);
     let year = date.slice(0, 4);
 
-    // if (day == "" || year == "" || day == "") {
-    //     return true;
-    // }
-
+    
     if (year >= currentYear) {
         if(year == currentYear){
             if (month >= currentMonth) {
@@ -93,9 +90,6 @@ function checkTime() {
     let hours = time.slice(0, 2);
     let minutes = time.slice(3);
 
-    // if (time == "") {
-    //     return null;
-    // }
 
     if (hours >= currentHours) {
         if (hours == currentHours) {
@@ -104,7 +98,7 @@ function checkTime() {
                 return true;
             } else {
                 alert("Invalid Time --> hours");
-                // timeO.value = "";
+                timeO.value = "";
                 return false;
             }
         }
@@ -112,7 +106,7 @@ function checkTime() {
         return true;
     } else {
         alert("Invalid Time --> hours");
-        // timeO.value = "";
+        timeO.value = "";
         return false;
     }
 }
@@ -125,21 +119,12 @@ formBook = document.getElementById("form");
 dateButton = document.getElementById("date");
 timeButton = document.getElementById("time");
 
-// submitButton.addEventListener("click", ()=>{
-//     checkDate();
-// })
-
-// formBook.addEventListener("submit", ()=>{
-//     checkDate();
-// })
-
-dateButton.onchange = function(){
+dateButton.addEventListener("change", ()=>{
     checkDate();
-};
+})
 
-timeButton.onfocusout = function(){
-    console.log('focus out');
-    // if(today){
-    //     checkTime();
-    // }
-};
+timeButton.addEventListener("focusout", ()=>{
+    if(today){
+        checkTime();
+    }
+});
