@@ -17,6 +17,7 @@
     font-size: xx-large;
     padding-top: 1em;
     padding-bottom: 0.5em;
+    text-align: center;
 }
 
 #form input[type="text"],
@@ -80,12 +81,17 @@
 @media (max-width: 500px) {
     #form legend {
         font-size: x-large;
-        padding-top: 1em;
-        padding-bottom: 0.5em;
+        padding: 0.8em;
     }
 
     #form input[type="submit"] {
-        font-size: 1em;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 460px) {
+    #form input[type="submit"] {
+        font-size: 0.8em;
     }
 }
 

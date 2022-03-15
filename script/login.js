@@ -87,8 +87,7 @@ const submit = document.getElementById("submit-button");
 //     }
 // });
 
-
-submit.addEventListener("click", () => {
+passwordO.addEventListener("change", () => {
     let pswd = passwordO.value;
     
     if (!size(pswd)) {
@@ -108,6 +107,27 @@ submit.addEventListener("click", () => {
         return 0
     }
 });
+
+// submit.addEventListener("click", () => {
+//     let pswd = passwordO.value;
+    
+//     if (!size(pswd)) {
+//         alert(`Wrong password! At least ${MINCHARACTERS} and maximum ${MAXCHARACTERS}`);
+//         return 0;
+//     }
+//     if (!upperCase(pswd)) {
+//         alert(`Wrong password! At least ${UPPERCASE} characters in upper case`);
+//         return 0
+//     }
+//     if (!lowerCase(pswd)) {
+//         alert(`Wrong password! At least ${LOWERCASE} characters in lower case`);
+//         return 0
+//     }
+//     if (!numbers(pswd)) {
+//         alert(`Wrong password! At least ${NUMBERS} characters have to be numbers`);
+//         return 0
+//     }
+// });
 
 showO.addEventListener("click", ()=>{
     if (passwordO.type === "password") {
