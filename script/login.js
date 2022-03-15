@@ -1,21 +1,24 @@
 /**
- * Check if password is small than 8 charecters
+ * Check if password is bigger than MINCHARACTERS and
+ * smaller than MAXCHARACTERS
  * @param {*} input
- * @returns true if is not empty
+ * @returns true if is ok
  */
- function small(input) {
-    return (input.length < MINCHARACTERS) ? true : false;
+ function checks(input) {
+    return ((input.length < MAXCHARACTERS)&&(input.length >= MINCHARACTERS )) ? true : false;
 }
 
 //----------------------- GLOBAL VARIABLES ----------------------- //
-const MINCHARACTERS = 10;
+const MINCHARACTERS = 5;
+const MAXCHARACTERS = 10;
 
 // ---------------------- EVENTS HANDLING ------------------------ //
-password = document.getElementById("pswd");
-let pswd = password.value;
+const passwordO = document.getElementById("pswd");
 
-password.addEventListener("focusout", ()=>{
-    if(small(pswd)){
-        alert('Wrong password! Too small ');
+passwordO.addEventListener("focusout", ()=>{
+    let pswd = passwordO.value;
+    // console.log(pswd.length);
+    if(!checks(pswd)){
+        alert(`Wrong password! At least ${MINCHARACTERS} and maximum ${MAXCHARACTERS}`);
     }
 })
