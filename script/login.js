@@ -63,8 +63,32 @@ const NUMBERS = 1;
 
 // ---------------------- EVENTS HANDLING ------------------------ //
 const passwordO = document.getElementById("pswd");
+const formO = document.getElementById("form");
+const submit = document.getElementById("submit-button");
 
-passwordO.addEventListener("focusout", () => {
+// passwordO.addEventListener("focusout", () => {
+//     let pswd = passwordO.value;
+    
+//     if (!size(pswd)) {
+//         alert(`Wrong password! At least ${MINCHARACTERS} and maximum ${MAXCHARACTERS}`);
+//         return 0;
+//     }
+//     if (!upperCase(pswd)) {
+//         alert(`Wrong password! At least ${UPPERCASE} characters in upper case`);
+//         return 0
+//     }
+//     if (!lowerCase(pswd)) {
+//         alert(`Wrong password! At least ${LOWERCASE} characters in lower case`);
+//         return 0
+//     }
+//     if (!numbers(pswd)) {
+//         alert(`Wrong password! At least ${NUMBERS} characters have to be numbers`);
+//         return 0
+//     }
+// });
+
+
+submit.addEventListener("click", () => {
     let pswd = passwordO.value;
     
     if (!size(pswd)) {
@@ -83,4 +107,12 @@ passwordO.addEventListener("focusout", () => {
         alert(`Wrong password! At least ${NUMBERS} characters have to be numbers`);
         return 0
     }
+});
+
+showO.addEventListener("click", ()=>{
+    if (passwordO.type === "password") {
+        passwordO.type = "text";
+      } else {
+        passwordO.type = "password";
+      }
 })

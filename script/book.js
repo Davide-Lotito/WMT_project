@@ -12,9 +12,6 @@ function empty(input) {
  * @param {*} dateStr 
  * @param {*} locale 
  * @returns the day's name
- * 
- * https://stackoverflow.com/questions/24998624/day-name-from-date-in-js
- * 
  */
 function getDayName(dateStr, locale) {
     let date = new Date(dateStr);
