@@ -224,6 +224,8 @@ const SUNTIMES = new Map([
     ["evening-end", 23]
 ]);
 const THRESHOLD = 15;
+
+
 // ---------------------- EVENTS HANDLING ------------------------ //
 submitButton = document.getElementById("submit-button");
 formBook = document.getElementById("form");
