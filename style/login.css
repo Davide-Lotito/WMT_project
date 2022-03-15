@@ -62,3 +62,38 @@
     background: #109177;
     color: black;
 }
+
+#callout-workers {
+    position: fixed;
+    bottom: 65px;
+    right: 10px;
+    margin-left: 20px;
+    max-width: 300px;
+}
+
+.callout-header {
+    padding: 1em;
+    background: rgb(255, 145, 0);
+    font-size: 2em;
+    color: white;
+}
+
+.callout-container {
+    padding: 1em;
+    background-color: #ccc;
+    font-size: 1.5em;
+    color: black
+}
+
+.closebtn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: black;
+}

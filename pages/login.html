@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style/common.css">
@@ -9,9 +10,11 @@
     <!-- icon libary -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body> 
+
+<body>
     <nav id="menu">
-        <button onclick="topFunction()" id="back-on-top" title="back on top"><img class="center" src="../images/arrowUp.png" alt="arrow Up"></button>
+        <button onclick="topFunction()" id="back-on-top" title="back on top"><img class="center"
+                src="../images/arrowUp.png" alt="arrow Up"></button>
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="./menu.html">Menu</a></li>
@@ -21,6 +24,12 @@
             <li class="right " id="login-page"><a class="login-link" href="./login.html">Login</a></li>
         </ul>
     </nav>
+    <!--progress bar-->
+    <div id="header-progress-bar">
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
     <!--title box area-->
     <div id="title-area">
         <a href="../index.html"><img src="../images/chef_white_icon.png" alt="restaurant icon" title="icon"></a>
@@ -30,12 +39,24 @@
     <div id="form">
         <form>
             <fieldset>
-                <legend><img src="https://media.giphy.com/media/kAOJ3W2xN5cXqYfEFo/giphy.gif" alt="cook gif" title="cook gif"> Login <img src="https://media.giphy.com/media/fuDNg9Fh84Yqst9Cps/giphy.gif" alt="chef gif" title="chef gif"></legend>
+                <legend><img src="https://media.giphy.com/media/kAOJ3W2xN5cXqYfEFo/giphy.gif" alt="cook gif"
+                        title="cook gif"> Login <img src="https://media.giphy.com/media/fuDNg9Fh84Yqst9Cps/giphy.gif"
+                        alt="chef gif" title="chef gif"></legend>
                 <input type="text" id="name" name="name" placeholder="Username" required>
                 <input type="password" id="pswd" name="pswd" placeholder="Password" required>
             </fieldset>
             <input type="submit" id="submit-button" value="Enter" />
         </form>
+    </div>
+    <!--Remider that the login is only for workers-->
+    <div id="callout-workers">
+        <div class="callout-header">Warning</div>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <div class="callout-container">
+            <p>
+                The Login form is only for the restaurant's workers.
+            </p>
+        </div>
     </div>
     <footer id="footer">
         &copy; Copyright 2022 - Da Davide Restaurant - All rights reserved.
@@ -48,4 +69,5 @@
     </footer>
     <script src="../script/common.js"></script>
 </body>
+
 </html>
