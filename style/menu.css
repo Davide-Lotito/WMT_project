@@ -9,6 +9,12 @@
     background-color: rgb(168, 167, 167);
 }
 
+#food-menu img,
+#explain img {
+    width: 30px;
+    height: 30px;
+}
+
 #menu-select{
     position: relative;
     width: 100%;
@@ -57,4 +63,20 @@
     color: black;
     border-radius: 10%;
     font-size: 0.6em;
+}
+
+#explain{
+    margin-top: 4em ;
+    position: relative;
+    width: 70%;
+    left: 15%; right: 15%;
+    text-align: center;
+    font-size: 2em;
+}
+
+#explain span{
+    position: relative;
+    width: 100%;
+    font-size: 0.8em;
+    color: black;
 }
