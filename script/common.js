@@ -1,4 +1,6 @@
-/*check how far you scroll the page*/
+/**
+ * how far you scroll the page
+ */
 function scrollFunction() {
     let onTop = document.getElementById("back-on-top");
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -8,13 +10,17 @@ function scrollFunction() {
     }
 }
 
-/*Back on top*/
+/**
+ * back on top
+ */
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
 
-/*Show the progress bar*/
+/**
+ * Show the progress bar
+ */
 function progressBar() {
   let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -27,3 +33,7 @@ window.onscroll = function () {
     scrollFunction();
     progressBar();
 }
+
+document.getElementById("back-on-top").addEventListener("click", ()=>{
+    topFunction();
+})

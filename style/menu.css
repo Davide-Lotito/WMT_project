@@ -1,7 +1,6 @@
-/* the idea about the menu layout comes from: https://www.w3schools.com/howto/howto_website_restaurant.asp */
+/* the idea on how to make the menu layout is taken from: https://www.w3schools.com/howto/howto_website_restaurant.asp */
 
 #food-menu{
-    /* border: 3px rgb(56, 56, 56) solid; */
     position: relative;
     width: 70%;
     left: 15%;
@@ -20,7 +19,6 @@
     position: relative;
     width: 100%;
     font-size: 3em;
-    /* padding-top: 0.5em; padding-bottom: 0.5em; */
     background-color: rgb(66, 66, 66);
 }
 
@@ -46,7 +44,6 @@
 }
 
 .food-name {
-    /* border: 1px yellow solid; */
     font-size: 3em;
 }
 
@@ -67,12 +64,14 @@
 }
 
 #explain{
-    margin-top: 4em ;
+    margin-top: 2em ;
     position: relative;
     width: 70%;
     left: 15%; right: 15%;
     text-align: center;
     font-size: 2em;
+    background-color: rgb(204, 204, 204);
+    border-radius: 15px 0 15px 0px;
 }
 
 #explain span{
