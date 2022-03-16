@@ -16,7 +16,7 @@ function openMenu(ev, menuName) {
 // ------------------------ EVENT HANDLERS ---------------
 pizza = document.getElementById("pizza-link"); 
 pasta = document.getElementById("pasta-link");
-starter = document.getElementById("starter-link");
+starter = document.getElementById("main-link");
 
 pizza.addEventListener("click", (ev)=>{
     openMenu(ev, 'Pizza');
