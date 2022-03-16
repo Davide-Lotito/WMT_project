@@ -39,13 +39,14 @@
     <!-- Menu Container -->
     <div id="food-menu">
         <div id="menu-select" class="row">
-            <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="start">
+            <a href="javascript:void(0)" id="pizza-link">
+                <!-- href="javascript:void(0)" in order to say to the browser to stays on the same page-->
                 <div class="tablink column">Pizza</div>
             </a>
-            <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
-                <div class="tablink column" >Salads</div>
+            <a href="javascript:void(0)" id="pasta-link">
+                <div class="tablink column" >Pasta</div>
             </a>
-            <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+            <a href="javascript:void(0)" id="starter-link">
                 <div class="tablink column">Starter</div>
             </a>
         </div>
@@ -56,7 +57,7 @@
             <hr>
 
             <h1 class="food-name">Formaggio <span>$15.50</span></h1>
-            <p>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</plass=>
+            <p>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
             <hr>
 
             <h1 class="food-name">Chicken <span>$17.00</span></h1>

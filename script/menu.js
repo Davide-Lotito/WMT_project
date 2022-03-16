@@ -1,4 +1,4 @@
-function openMenu(evt, menuName) {
+function openMenu(ev, menuName) {
     let i, menu, tablinks;
     menu = document.getElementsByClassName("sub-menu");
     for (i = 0; i < menu.length; i++) {
@@ -9,6 +9,25 @@ function openMenu(evt, menuName) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     document.getElementById(menuName).style.display = "block";
-    evt.currentTarget.firstElementChild.className += " active";
+    ev.currentTarget.firstElementChild.className += " active";
 }
-document.getElementById("start").click();
+
+
+document.getElementById("pizza-link").click();
+
+// ------------------------ EVENT HANDLERS ---------------
+pizza = document.getElementById("pizza-link");
+pasta = document.getElementById("pasta-link");
+starter = document.getElementById("starter-link");
+
+pizza.addEventListener("click", (ev)=>{
+    openMenu(ev, 'Pizza');
+});
+
+pasta.addEventListener("click", (ev)=>{
+    openMenu(ev, 'Pasta');
+});
+
+starter.addEventListener("click", (ev)=>{
+    openMenu(ev, 'Starter');
+});
