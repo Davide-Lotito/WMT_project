@@ -1,0 +1,60 @@
+/* .menu {display: none} */
+
+#food-menu{
+    /* border: 3px rgb(56, 56, 56) solid; */
+    position: relative;
+    width: 70%;
+    left: 15%;
+    box-sizing: border-box;
+    background-color: rgb(168, 167, 167);
+}
+
+#menu-select{
+    position: relative;
+    width: 100%;
+    font-size: 3em;
+    /* padding-top: 0.5em; padding-bottom: 0.5em; */
+    background-color: rgb(82, 81, 81);
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.active{
+    background-color: goldenrod;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#menu-select a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.food-name {
+    /* border: 1px yellow solid; */
+    font-size: 3em;
+}
+
+.sub-menu{
+    padding-left: 2em;
+}
+
+.sub-menu p{
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.sub-menu h1 span{
+    background-color: rgb(72, 119, 119);
+    color: black;
+    border-radius: 10%;
+    font-size: 0.6em;
+}

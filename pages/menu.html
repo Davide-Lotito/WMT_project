@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Menu</title>
     <link rel="stylesheet" href="../style/common.css">
+    <link rel="stylesheet" href="../style/menu.css">
     <link rel="icon" type="image/png" href="../images/chef_white_icon.png">
     <!-- icon libary -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <nav id="menu">
-        <button onclick="topFunction()" id="back-on-top" title="back on top"><img class="center" src="../images/arrowUp.png" alt="arrow Up"></button>
+        <button onclick="topFunction()" id="back-on-top" title="back on top"><img class="center"
+                src="../images/arrowUp.png" alt="arrow Up"></button>
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a class="active" href="./menu.html">Menu</a></li>
@@ -25,7 +29,87 @@
         <a href="../index.html"><img src="../images/chef_white_icon.png" alt="restaurant icon" title="icon"></a>
         <h1 id="title-text" class="title-font">Restaurant Pizzeria da Davide</h1>
     </div>
-    <h1 style="text-align: center;">Here there will be the menu. List of item</h1>
+    <!--progress bar-->
+    <div id="header-progress-bar">
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+    <h2 class="center title-font title-minor">Menu</h2>
+    <!-- Menu Container -->
+    <div id="food-menu">
+        <div id="menu-select" class="row">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="start">
+                <div class="tablink column">Pizza</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+                <div class="tablink column" >Salads</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+                <div class="tablink column">Starter</div>
+            </a>
+        </div>
+
+        <div id="Pizza" class="sub-menu">
+            <h1 class="food-name">Margherita <span>$12.50</span></h1>
+            <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+            <hr>
+
+            <h1 class="food-name">Formaggio <span>$15.50</span></h1>
+            <p>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</plass=>
+            <hr>
+
+            <h1 class="food-name">Chicken <span>$17.00</span></h1>
+            <p>Fresh tomatoes, mozzarella, chicken, onions</p>
+            <hr>
+
+            <h1 class="food-name">Pineapple'o'clock <span>$16.50</span></h1>
+            <p>Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+            <hr>
+
+            <h1 class="food-name">Meat Town <span>$20.00</span></h1>
+            <p>Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+            <hr>
+
+            <h1 class="food-name">Parma <span>$21.50</span></h1>
+            <p>Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+        </div>
+
+        <div id="Pasta" class="sub-menu">
+            <h1 class="food-name">Lasagna <span>$13.50</span></h1>
+            <p>Special sauce, mozzarella, parmesan, ground beef</p>
+            <hr>
+
+            <h1 class="food-name">Ravioli <span>$14.50</span></h1>
+            <p>Ravioli filled with cheese</p>
+            <hr>
+
+            <h1 class="food-name" >Spaghetti Classica <span>$11.00</span></h1>
+            <p class="w3-text-grey">Fresh tomatoes, onions, ground beef</p>
+            <hr>
+
+            <h1 class="food-name">Seafood pasta <span>$25.50</span></h1>
+            <p>Salmon, shrimp, lobster, garlic</p>
+        </div>
+        
+        <div id="Starter" class="sub-menu">
+            <h1 class="food-name">Dish of the day <span>$5.50</span></h1>
+            <p>Ask the waiter</p>
+            <hr>
+
+            <h1 class="food-name"><b>Bruschetta</b> <span>$8.50</span></h1>
+            <p>Bread with pesto, tomatoes, onion, garlic</p>
+            <hr>
+
+            <h1 class="food-name"><b>Garlic bread</b> <span>$9.50</span></h1>
+            <p>Grilled ciabatta, garlic butter, onions</p>
+            <hr>
+
+            <h1 class="food-name"><b>Tomozzarella</b> <span>$10.50</span></h1>
+            <p>Tomatoes and mozzarella</p>
+        </div><br>
+
+    </div>
     <footer id="footer">
         &copy; Copyright 2022 - Da Davide Restaurant - All rights reserved.
         <br>
@@ -36,5 +120,7 @@
         </div>
     </footer>
     <script src="../script/common.js"></script>
+    <script src="../script/menu.js"></script>
 </body>
+
 </html>
