@@ -14,8 +14,9 @@ These gifs are used for personal / educational purposes only, ****not for commer
 ---
 
 <h1>A website for a Restaurant</h1>
-<br><br><br>
-<h2>You can reach the website <a href="https://davide-lotito.github.io/WMT_project/">https://davide-lotito.github.io/WMT_project/</a>
+<br><br>
+You can reach the website <a href="https://davide-lotito.github.io/WMT_project/">https://davide-lotito.github.io/WMT_project/</a>
+<br><br>
 <div align="center">
   <a href="https://davide-lotito.github.io/WMT_project/"><img src="https://github.com/Davide-Lotito/WMT_project/blob/main/images/chef_white_icon.png" alt="restaurant logo"/></a>
 </div>
