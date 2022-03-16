@@ -67,7 +67,8 @@ body {
 }
 
 /*media queries for the navigation-bar*/
-@media (max-width: 620px) {
+@media only screen and (max-width: 685px) {
+/* @media (max-width: 620px) { */
 
     #menu li.right,
     #menu li {
@@ -77,29 +78,11 @@ body {
     .dots {
         display: none;
     }
-
-    /* #login-page{
-        display: none;
-    } */
 }
 
 @font-face {
     font-family: "Indie Flower";
     src: url("./fonts/Indie_Flower/IndieFlower-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Zen Antique";
-    src: url("./fonts/Zen_Antique/ZenAntique-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Zen Antique Soft";
-    src: url("./fonts/Zen_Antique_Soft/ZenAntiqueSoft-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
