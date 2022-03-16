@@ -4,7 +4,7 @@ function openMenu(ev, menuName) {
     for (i = 0; i < menu.length; i++) {
         menu[i].style.display = "none";
     }
-    tablinks = document.getElementsByClassName("tablink");
+    tablinks = document.getElementsByClassName("tab");
     for (i = 0; i < menu.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }

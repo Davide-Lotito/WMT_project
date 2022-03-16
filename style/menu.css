@@ -49,6 +49,7 @@
 
 .sub-menu{
     padding-left: 2em;
+    padding-right: 2em;
 }
 
 .sub-menu p{
@@ -74,9 +75,50 @@
     border-radius: 15px 0 15px 0px;
 }
 
+.sub-menu hr{
+    padding: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
 #explain span{
     position: relative;
     width: 100%;
     font-size: 0.8em;
     color: black;
+}
+
+@media (max-width: 1400px){
+    #menu-select{
+        font-size: 2em;
+    }
+    .food-name{
+        font-size: 2em;
+    }
+    .sub-menu p{
+        font-size: 2em;
+    }
+    #food-menu img,
+    #explain img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 900px){
+    .column{
+       float: none;
+       position: relative;
+       width: 100%; 
+    }
+    .sub-menu h1{
+        text-align: center;
+    }
+    .sub-menu p{
+        font-size: 1em;
+        text-align: center;
+    }
+    .sub-menu h1 span{
+        font-size: 0.4em;
+    }
 }
