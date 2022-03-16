@@ -13,10 +13,8 @@ function openMenu(ev, menuName) {
 }
 
 
-document.getElementById("pizza-link").click();
-
 // ------------------------ EVENT HANDLERS ---------------
-pizza = document.getElementById("pizza-link");
+pizza = document.getElementById("pizza-link"); 
 pasta = document.getElementById("pasta-link");
 starter = document.getElementById("starter-link");
 
@@ -31,3 +29,5 @@ pasta.addEventListener("click", (ev)=>{
 starter.addEventListener("click", (ev)=>{
     openMenu(ev, 'Starter');
 });
+
+pizza.click(); //default menu page
