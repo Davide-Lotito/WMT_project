@@ -17,6 +17,7 @@ function openMenu(ev, menuName) {
 pizza = document.getElementById("pizza-link"); 
 pasta = document.getElementById("pasta-link");
 starter = document.getElementById("main-link");
+dessert = document.getElementById("dessert-link");
 
 pizza.addEventListener("click", (ev)=>{
     openMenu(ev, 'Pizza');
@@ -27,7 +28,11 @@ pasta.addEventListener("click", (ev)=>{
 });
 
 starter.addEventListener("click", (ev)=>{
-    openMenu(ev, 'Starter');
+    openMenu(ev, 'Main');
+});
+
+dessert.addEventListener("click", (ev)=>{
+    openMenu(ev, 'Dessert');
 });
 
 pizza.click(); //default menu page
