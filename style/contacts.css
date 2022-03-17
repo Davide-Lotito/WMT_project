@@ -4,7 +4,6 @@
 
 .column {
     width: 50%;
-    /* padding-top: 0.5em; */
     padding-left: 3em;
     padding-right: 3em;
 }
@@ -16,18 +15,18 @@
 }
 
 #main-contacts h2{
-    margin: auto;
+    margin-top: 2em;
     text-align: center;
     font-size: xx-large;
-    padding-top: 2em;
     padding-bottom: 0;
+    background-color: rgb(54, 54, 54);
+    border-radius: 15px 0 15px 0px;;
 }
 
 #main-contacts img{
     width: 40px;
     height: 40px;
     margin-right: 1em;
-    /* margin-bottom: 0.5em; */
 }
 
 #main-contacts{
@@ -53,12 +52,8 @@ ul li{
     text-decoration: none;
 }
 
-/*media queries for layout*/
 @media (max-width: 900px) {
     #column1 ul{
-        float: none;
-    }
-    #column2 ul{
         float: none;
     }
     #column1{
@@ -66,12 +61,33 @@ ul li{
         position: relative;
         width: 100%;
         font-size: smaller;
-        text-align: justify;
         padding: 0; border: 0;
     }
+    #column2 ul{
+        float: none;
+    }
+    #column2{
+        float: none;
+        padding: 0; border: 0;
+        position: relative;
+        width: 100%;
+    }
+    #list-hours{
+        float: none;
+        position: relative;
+        width: 90%;
+        left: 5%; right: 5%;
+        text-align: center;
+    }
+    #column2 h2{
+        float: none;
+    }
+
+}
+
+@media (max-width: 700px) {
     #column1 h2{
         position: relative;
-        padding: 1em;
     }
     #column1 li{
         float: none;
@@ -88,24 +104,11 @@ ul li{
         margin: 0; padding: 0;
         width: fit-content;
     }
-    #list-hours{
-        float: none;
-        position: relative;
-        width: 100%;
-        text-align: center;
-    }
     #list-hours .float-left{
         float: none;
         position: relative;
         margin: auto;
         padding: 0
-    }
-    #column2{
-        float: none;
-        padding: 0; border: 0;
-        position: relative;
-        width: 80%;
-        left: 10%; right: 10%;
     }
 }
 

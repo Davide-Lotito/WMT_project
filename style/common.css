@@ -67,16 +67,19 @@ body {
 }
 
 /*media queries for the navigation-bar*/
-@media only screen and (max-width: 685px) {
-/* @media (max-width: 620px) { */
-
+@media all and (max-width: 685px) {
     #menu li.right,
     #menu li {
         float: none;
     }
-
     .dots {
         display: none;
+    }
+    #footer{
+        font-size: 5;
+    }
+    .center{
+        font-size: 1em;
     }
 }
 
@@ -110,7 +113,7 @@ body {
 #footer .social-links {
     text-align: right;
     position: absolute;
-    top: 0;
+    top: 1em;
     right: 1em;
 }
 

@@ -83,9 +83,18 @@
         font-size: x-large;
         padding: 0.8em;
     }
-
     #form input[type="submit"] {
         font-size: 0.8em;
+    }
+    #callout-timetable{
+        display: none;
+    }
+    #form{
+        margin: 0;
+        padding: 0.5em;
+        position: relative;
+        width: 80%;
+        left: 10%; right: 10%;
     }
 }
 
@@ -97,10 +106,8 @@
 
 #callout-timetable {
     position: fixed;
-    bottom: 35px;
-    right: 20px;
-    margin-left: 20px;
-    max-width: 300px;
+    bottom: 10%;
+    left: 2%;
 }
 
 .callout-header {
