@@ -105,11 +105,9 @@
         padding-top: 1em;
         padding-bottom: 0.5em;
     }
-
     #form input[type="submit"] {
         font-size: 0.6em;
     }
-
     #callout-workers,
     #form legend img{
         display: none;
