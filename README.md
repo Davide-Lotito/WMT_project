@@ -18,7 +18,8 @@ These gifs are used for personal / educational purposes only, ****not for commer
 You can reach the website <a href="https://davide-lotito.github.io/WMT_project/" target="_blank">https://davide-lotito.github.io/WMT_project/</a>
 <br><br>
 <div align="center">
-  <a href="https://davide-lotito.github.io/WMT_project/" target="_blank"><img src="https://github.com/Davide-Lotito/WMT_project/blob/main/images/chef_white_icon.png" alt="restaurant logo"/></a>
+<!--   <a href="https://davide-lotito.github.io/WMT_project/" target="_blank"><img src="https://github.com/Davide-Lotito/WMT_project/blob/main/images/chef_white_icon.png" alt="restaurant logo"/></a> -->
+  <a href="https://davide-lotito.github.io/WMT_project/index.html" target="_blank"><img src="https://github.com/Davide-Lotito/WMT_project/blob/main/images/mockUpWebSite.png" alt="mockup"/></a>
 </div>
 
 
