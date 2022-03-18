@@ -13,14 +13,14 @@ body {
 #back-on-top {
     display: none;
     position: fixed;
-    bottom: 10%;
-    width: 5%;
+    bottom: 12%;
+    width: 10%;
     z-index: 99;
     outline: none;
     background-color: rgb(13, 192, 236);
     opacity: 0.7;
     cursor: pointer;
-    padding: 1em;
+    padding-top: 1em; padding-bottom: 1em;
     border: none;
 }
 
@@ -33,6 +33,7 @@ body {
     padding: 0;
     position: relative;
     width: 100%;
+    left: 0; right: 0;
 }
 
 #menu ul {
@@ -82,9 +83,6 @@ body {
     .dots {
         display: none;
     }
-    #footer{
-        font-size: 5;
-    }
     .center{
         font-size: 1em;
     }
@@ -108,13 +106,12 @@ body {
     position: relative;
     bottom: 0;
     top: 3em;
-    width: 95%;
-    margin: auto;
+    width: 100%;
+    /* margin: auto; */
     background-color: #333;
     text-align: left;
     font-size: 100%;
-    padding: 1em;
-    padding-right: 1em;
+    padding-top: 1em; padding-bottom: 1em;
 }
 
 #footer .social-links {
