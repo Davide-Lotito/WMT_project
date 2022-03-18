@@ -10,9 +10,7 @@
 
 .single-slide img {
   position: relative;
-  left: 15%; right: 15%;
-  width: 70%;
-  height: 50%;
+  width: 100%;
 }
 
 .dots {
@@ -65,9 +63,8 @@
 
 #brief-description {
   position: relative;
-  width: 80%;
-  left: 10%;
-  padding: 1em;
+  width: 90%;
+  left: 5%;
 }
 
 #brief-description h4 {
@@ -95,13 +92,11 @@
   #brief-description img {
     float: none;
     position: relative;
-    left: 0;
     width: 100%;
   }
-  .slideshow-container{
-    margin: auto;
-    left: 0;
-    width: 100%;
+  #big-menu-button{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
 }
 
@@ -110,11 +105,10 @@
   letter-spacing: 0.2em;
   font-size: 3em;
   font-weight: bold;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 2em; padding-bottom: 2em;
   position: relative;
-  width: 80%;
-  left: 10%;
+  width: 90%;
+  left: 5%;
 }
 
 #big-menu-button a {
