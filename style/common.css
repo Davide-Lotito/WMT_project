@@ -28,6 +28,13 @@ body {
     background-color: rgb(8, 147, 240);
 }
 
+#menu{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
 #menu ul {
     list-style: none;
     margin: 0;
@@ -46,7 +53,7 @@ body {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 0.3em 0.5em;
     text-decoration: none;
 }
 
