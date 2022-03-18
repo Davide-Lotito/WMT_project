@@ -1,23 +1,22 @@
 #form {
     position: relative;
     width: 50%;
-    left: 25%;
-    right: 25%;
+    left: 25%; right: 25%;
     background: #747474;
-    padding: 2em;
     border-radius: 8px;
     color: black;
 }
 
 #form fieldset {
     border: none;
+    padding: 2em;
 }
 
 #form legend {
     font-size: 3em;
     padding-top: 1em;
     padding-bottom: 0.5em;
-    margin: auto;
+    margin-left: auto; margin-right: auto;
 }
 
 #form legend img{
@@ -28,7 +27,7 @@
 #form input[type="password"] {
     font-family: "Indie Flower";
     background: rgba(255, 255, 255, .1);
-    font-size: larger;
+    font-size: 1.5em;
     width: 100%;
     border-radius: 8px;
     background-color: whitesmoke;
@@ -44,9 +43,9 @@
 #form input[type="submit"] {
     position: relative;
     width: 50%;
-    left: 25%; right: 25%;
-    margin-top: 5%;
-    padding: 19px 39px 18px 39px;
+    left: 25%;
+    margin-bottom: 5%;
+    padding: 2% 8% 2% 8%;
     color: #FFF;
     background: #1abc9c;
     font-family: "Indie Flower";
@@ -111,5 +110,8 @@
     #form legend img{
         display: none;
     }
-
+    #form label{
+        font-size: 0.6em;
+        padding-top: 0;
+    }
 }
