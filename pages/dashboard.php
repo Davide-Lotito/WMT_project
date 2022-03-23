@@ -37,8 +37,18 @@
     //Assigning the current timestamp as the user's the latest action
     $_SESSION['last_action'] = time();
     ?>
-
-    <h1 class="center">Hello Admin</h1>
+    <!--navigation bar-->
+    <nav id="menu">
+        <button id="back-on-top" title="back on top"><img class="center" src="./images/arrowUp.png" alt="arrow Up"></button>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./menu.html">Menu</a></li>
+            <li><a href="./book.html">Reserve</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contacts.html">Contacts</a></li>
+            <li class="right" id="login-page"><a class="login-link" href="./logout.html">Logout</a></li>
+        </ul>
+    </nav>
 </body>
 
 </html>

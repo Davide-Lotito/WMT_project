@@ -40,7 +40,7 @@
     <!--reservation form-->
     <!--the inspiration for this style of the form was taken from https://www.sanwebe.com/2014/08/css-html-forms-designs-->
     <div id="form">
-        <form>
+        <form action="../php/insertBook.php" method="get">
             <fieldset>
                 <legend><span class="number">1</span>General Info</legend>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -51,7 +51,7 @@
             </fieldset>
             <fieldset>
                 <legend><span class="number replaced">2</span> Additional Info</legend>
-                <textarea name="allergies" placeholder="Add any food allergies"></textarea>
+                <textarea name="allergies" id="allergies" placeholder="Add any food allergies"></textarea>
             </fieldset>
             <input type="submit" id="submit-button" value="Apply" />
         </form>
