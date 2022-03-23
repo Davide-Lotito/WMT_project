@@ -1,0 +1,18 @@
+#item{
+    margin-top: 5%;
+    position: relative;
+    width: 80%;
+    left: 10%;
+    padding: 1em;
+    border: 4px yellow solid;
+    font-size: 2em;
+}
+
+.date{
+    color: black;
+    border: 2px red solid;
+}
+
+.id{
+    text-decoration: underline;
+}

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page</title>
     <link rel="stylesheet" href="../style/common.css">
+    <link rel="stylesheet" href="../style/dashboard.css">
     <link rel="icon" type="image/png" href="../images/chef_white_icon.png">
 </head>
 <!--A php file is considered as hack file by Gitlab and Github when there is only HTML code in it.
@@ -23,7 +24,6 @@
     if (isset($_SESSION['last_action'])) {
 
         $secondsInactive = time() - $_SESSION['last_action'];
-
         $expireAfterSeconds = $expireAfter * 60;
 
         if ($secondsInactive >= $expireAfterSeconds) {
@@ -49,6 +49,24 @@
             <li class="right" id="login-page"><a class="login-link" href="./logout.html">Logout</a></li>
         </ul>
     </nav>
+    <?php
+        require_once("../php/config.php");
+
+        $sql = "SELECT id, name, phone, date, time, people, allergies FROM reservations";
+        $result = $conn->query($sql);
+        
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                echo "<div id='item'>" . "<em class='id'>id: " . $row["id"]. "</em> - Name: " . $row["name"]. "<br>" .
+                "Number people: " . $row["people"]. " - Phone number: " . $row["phone"]. "<br>" .
+                "<strong class='date'>Time: " . $row["time"]. " - date: " . $row["date"]. "</strong><br>" .
+                "Allergies: " . $row["allergies"] . "</div>";
+            }
+        } else {
+            echo "0 results";
+        }
+    ?>
 </body>
 
 </html>
