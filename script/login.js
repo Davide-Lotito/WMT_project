@@ -28,7 +28,7 @@ function upperCase(input) {
  * @param {*} input 
  * @returns true if is ok
  */
- function lowerCase(input) {
+function lowerCase(input) {
     let lower = 0;
     for (let i = 0; i < input.length; i++) {
         if (input.charAt(i) == input.charAt(i).toLowerCase()) {
@@ -36,7 +36,7 @@ function upperCase(input) {
         }
     }
     return (lower >= LOWERCASE) ? true : false;
- }
+}
 
 /**
  * Check if the password has at least NUMBERS numbers inside 
@@ -47,8 +47,6 @@ function numbers(input) {
     let regex = /\d+/;
     let m = 0;
     if (input.match(regex)) {
-        // m = input.match(regex).join(" -").length;
-        // console.log(input.match(regex));
         m += input.match(regex).join("-").length;
     }
     return (m >= NUMBERS) ? true : false;
@@ -65,10 +63,11 @@ const NUMBERS = 1;
 const passwordO = document.getElementById("pswd");
 const formO = document.getElementById("form");
 const submit = document.getElementById("submit-button");
+const showO = document.getElementById("show-pswd");
 
 // passwordO.addEventListener("focusout", () => {
 //     let pswd = passwordO.value;
-    
+
 //     if (!size(pswd)) {
 //         alert(`Wrong password! At least ${MINCHARACTERS} and maximum ${MAXCHARACTERS}`);
 //         return 0;
@@ -89,7 +88,7 @@ const submit = document.getElementById("submit-button");
 
 passwordO.addEventListener("change", () => {
     let pswd = passwordO.value;
-    
+
     if (!size(pswd)) {
         alert(`Wrong password! At least ${MINCHARACTERS} and maximum ${MAXCHARACTERS}`);
         return 0;
@@ -110,7 +109,7 @@ passwordO.addEventListener("change", () => {
 
 // submit.addEventListener("click", () => {
 //     let pswd = passwordO.value;
-    
+
 //     if (!size(pswd)) {
 //         alert(`Wrong password! At least ${MINCHARACTERS} and maximum ${MAXCHARACTERS}`);
 //         return 0;
@@ -129,10 +128,13 @@ passwordO.addEventListener("change", () => {
 //     }
 // });
 
-showO.addEventListener("click", ()=>{
+/**
+ * Show the password field
+ */
+showO.addEventListener("click", () => {
     if (passwordO.type === "password") {
         passwordO.type = "text";
-      } else {
+    } else {
         passwordO.type = "password";
-      }
-})
+    }
+});
