@@ -34,7 +34,6 @@
         $results = $conn->query($sql);
 
         foreach ($results as $user) {
-
             if (($user['adminname'] == $adminname) && ($user['password'] == $password)) {
                 header("Location: ../pages/dashboard.php");
             } else {
