@@ -1,3 +1,4 @@
+<!-- This this script is used to connect with the database -->
 <?php
         $servername = "localhost";
         $dbname = "restaurant";
