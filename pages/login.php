@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <?php
+    include("../php/validate.php");
+    ?>
     <!--navigation bar-->
     <nav id="menu">
         <button id="back-on-top" title="back on top"><img class="center"
