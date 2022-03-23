@@ -1,4 +1,7 @@
 <?php
+
+    require_once("config.php");
+
     // referece: https://www.w3schools.com/php/php_form_validation.asp
     function test_input($data) {
         $data = trim($data);
@@ -7,27 +10,7 @@
         return $data;
     }
 
-    function connection()
-    {
-        $servername = "localhost";
-        $dbname = "restaurant";
-        $username = "root";
-        $password = "";
-        
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        
-        // Check connection
-        if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-          return null;
-        } else {
-            return $conn;
-        }
-    }
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $conn = connection();
         $adminname = test_input($_POST["name"]);
         $password = test_input($_POST["pswd"]);
         $sql = "SELECT * FROM adminlogin";
