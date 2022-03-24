@@ -1,9 +1,0 @@
-Per eseguire le operazioni con PhP e WAMP.
-
--- usato "MySQLi Object-Oriented"
--- sotto la pagina PhpMyAdmin
--- fare login, con credenziali nome: 'root' e pswd: ''
--- creato il db di nome 'restaurant' per questo progetto
-    -- all'interno una tabella 'adminlogin' per il login
-    -- due account sono all'iterno: (admin,Admin1) e (root,Root2)
-    
