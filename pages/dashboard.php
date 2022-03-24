@@ -10,15 +10,18 @@
     <link rel="stylesheet" href="../style/dashboard.css">
     <link rel="icon" type="image/png" href="../images/chef_white_icon.png">
 </head>
-<!--A php file is considered as hack file by Gitlab and Github when there is only HTML code in it.
-    https://stackoverflow.com/questions/58598113/what-hack-means-in-the-languages-bar-on-gitlab 
--->
-
 <body>
     <?php
     session_start();
 
-    //Expiring the session in case the user is inactive for expireAfter minute
+    function expiredTime($msg) {
+        echo '<script type="text/javascript">';
+        echo 'alert("'.$msg.'");';
+        echo 'window.location = "../pages/login.php"';
+        echo '</script>';
+    }
+
+    //Expiring the session in case the user is inactive for expireAfter minutes
     $expireAfter = 5;
 
     if (isset($_SESSION['last_action'])) {
@@ -30,25 +33,25 @@
             // The user has not been active for too long -> Killing the session.
             session_unset();
             session_destroy();
-            header("Location: ../pages/login.php");
+            expiredTime("Your time is expired! Login another time");
         }
     }
 
     //Assigning the current timestamp as the user's the latest action
     $_SESSION['last_action'] = time();
     ?>
-    <!--navigation bar-->
-    <nav id="menu">
-        <button id="back-on-top" title="back on top"><img class="center" src="./images/arrowUp.png" alt="arrow Up"></button>
+
+    <button id="back-on-top" title="back on top"><img class="center" src="../images/arrowUp.png" alt="arrow Up"></button>
+    <!--show reservation of a specific day-->
+    <nav id="days">
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./menu.html">Menu</a></li>
-            <li><a href="./book.html">Reserve</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contacts.html">Contacts</a></li>
-            <li class="right" id="login-page"><a class="login-link" href="./logout.html">Logout</a></li>
+            <li><a href="#">Today</a></li>
+            <li><a href="#">Tomorrow</a></li>
+            <li><a href="#">After Tomorrow</a></li>
+            <li class="right" id="login-page"><a class="logout-link" href="./logout.html">Logout</a></li>
         </ul>
     </nav>
+
     <?php
         require_once("../php/config.php");
 
@@ -67,6 +70,10 @@
             echo "0 results";
         }
     ?>
+    <footer id="footer">
+        &copy; Copyright 2022 <br> Da Davide Restaurant
+    </footer>
+    <script src="../script/common.js"></script>
+    <script src="../script/dashboard.js"></script>
 </body>
-
 </html>
