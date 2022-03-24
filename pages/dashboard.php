@@ -13,7 +13,7 @@
 <body>
     <?php
     session_start();
-
+    
     function expiredTime($msg) {
         echo '<script type="text/javascript">';
         echo 'alert("'.$msg.'");';
@@ -22,23 +22,27 @@
     }
 
     //Expiring the session in case the user is inactive for expireAfter minutes
-    $expireAfter = 5;
+    $expireAfterMinute = 5;
 
-    if (isset($_SESSION['last_action'])) {
+    if (isset($_SESSION['last_reload'])) {
 
-        $secondsInactive = time() - $_SESSION['last_action'];
-        $expireAfterSeconds = $expireAfter * 60;
+        $secondsInactive = time() - $_SESSION['last_reload'];
+        $expireAfterSeconds = $expireAfterMinute * 60;
 
         if ($secondsInactive >= $expireAfterSeconds) {
-            // The user has not been active for too long -> Killing the session.
+            // killing the session
             session_unset();
             session_destroy();
             expiredTime("Your time is expired! Login another time");
         }
+    } else {
+        $_SESSION['last_reload'] = time();
     }
 
-    //Assigning the current timestamp as the user's the latest action
-    $_SESSION['last_action'] = time();
+    //reload the page every minute, to see to see the latest bookings
+    echo '<script type="text/javascript">
+            setTimeout(function (){ location.reload() }, 1000*60*1);
+            </script>';
     ?>
 
     <button id="back-on-top" title="back on top"><img class="center" src="../images/arrowUp.png" alt="arrow Up"></button>
