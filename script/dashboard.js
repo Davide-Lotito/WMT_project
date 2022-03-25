@@ -4,6 +4,6 @@ let todayButton = document.getElementById("today");
 //     const result = <?php 
 //                     require_once("../php/query.php");
 //                     getResults("today");
-//                     ?>
+//                     ?>;
 //     console.log()
 // });

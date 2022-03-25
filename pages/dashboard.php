@@ -49,22 +49,40 @@
     <!--show reservation of a specific day-->
     <nav id="days">
         <ul>
-            <li><a href="#" id="today">Today</a></li>
+            <li><a href="#">Today</a></li>
             <li><a href="#">Tomorrow</a></li>
             <li><a href="#">After Tomorrow</a></li>
             <li class="right" id="login-page"><a class="logout-link" href="./logout.html">Logout</a></li>
         </ul>
     </nav>
+    <!--options-->
+    <div>
+        <form method="get" id="options">
+            <input type="submit" name="today" value="Today"/>
+            <input type="submit" name="today+1" value="Tomorrow"/>
+            <input type="submit" name="today+2" value="After Tomorrow"/>
+            <input type="submit" name="all" value="All"/>
+        </form>
+    </div>
 
     <?php
         require_once("../php/config.php");
         require_once("../php/query.php");
 
-        // $sql = "SELECT id, name, phone, date, time, people, allergies FROM reservations";
-        // $result = $conn->query($sql);
-        
-        //default shows the reservations of today
-        $result = getResults("today",$conn);
+        if(isset($_GET['all'])) {
+            $sql = "SELECT id, name, phone, date, time, people, allergies FROM reservations";
+            $result = $conn->query($sql);
+        }else if(isset($_GET['today'])) {
+            $result = getResults("today",$conn);
+        }else if(isset($_GET['today+1'])) {
+            $result = getResults("+1 day",$conn);
+        } else if(isset($_GET['today+2'])) {
+            $result = getResults("+2 day",$conn);
+        } else {
+            //default shows all the reservations
+            $sql = "SELECT id, name, phone, date, time, people, allergies FROM reservations";
+            $result = $conn->query($sql);
+        }
 
         if ($result->num_rows > 0) {
             // output data of each row
