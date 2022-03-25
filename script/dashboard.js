@@ -1,7 +1,9 @@
-const MINUTE = 1;
+let todayButton = document.getElementById("today");
 
-
-//reload the page every MINUTE
-// setTimeout(function (){
-//     location.reload()
-// }, 1000*60*MINUTE);
+// todayButton.addEventListener("click", ()=>{
+//     const result = <?php 
+//                     require_once("../php/query.php");
+//                     getResults("today");
+//                     ?>
+//     console.log()
+// });

@@ -22,7 +22,7 @@
     }
 
     //Expiring the session in case the user is inactive for expireAfter minutes
-    $expireAfterMinute = 5;
+    $expireAfterMinute = 10;
 
     if (isset($_SESSION['last_reload'])) {
 
@@ -49,7 +49,7 @@
     <!--show reservation of a specific day-->
     <nav id="days">
         <ul>
-            <li><a href="#">Today</a></li>
+            <li><a href="#" id="today">Today</a></li>
             <li><a href="#">Tomorrow</a></li>
             <li><a href="#">After Tomorrow</a></li>
             <li class="right" id="login-page"><a class="logout-link" href="./logout.html">Logout</a></li>
@@ -58,10 +58,14 @@
 
     <?php
         require_once("../php/config.php");
+        require_once("../php/query.php");
 
-        $sql = "SELECT id, name, phone, date, time, people, allergies FROM reservations";
-        $result = $conn->query($sql);
+        // $sql = "SELECT id, name, phone, date, time, people, allergies FROM reservations";
+        // $result = $conn->query($sql);
         
+        //default shows the reservations of today
+        $result = getResults("today",$conn);
+
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
