@@ -49,9 +49,9 @@
     <!--show reservation of a specific day-->
     <nav id="days">
         <ul>
-            <li><a href="#">Today</a></li>
+            <!-- <li><a href="#">Today</a></li>
             <li><a href="#">Tomorrow</a></li>
-            <li><a href="#">After Tomorrow</a></li>
+            <li><a href="#">After Tomorrow</a></li> -->
             <li class="right" id="login-page"><a class="logout-link" href="./logout.html">Logout</a></li>
         </ul>
     </nav>
