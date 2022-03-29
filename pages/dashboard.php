@@ -13,7 +13,10 @@
 <body>
     <?php
     session_start();
-    
+    include("../php/passwords.php");
+    check_logged();
+    // echo ($_SESSION["logged"]); // !!!! REMOVE
+
     function expiredTime($msg) {
         echo '<script type="text/javascript">';
         echo 'alert("'.$msg.'");';

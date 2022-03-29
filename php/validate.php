@@ -1,6 +1,6 @@
 <?php
-
-    require_once("config.php");
+    include("./config.php");
+    session_start();
 
     // referece: https://www.w3schools.com/php/php_form_validation.asp
     function test_input($data) {
@@ -25,6 +25,7 @@
 
         foreach ($results as $user) {
             if (($user['adminname'] == $adminname) && ($user['password'] == $password)) {
+                $_SESSION["logged"] = $adminname; 
                 header("Location: ../pages/dashboard.php");
             }
         }
