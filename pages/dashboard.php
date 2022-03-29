@@ -60,7 +60,7 @@
 
     <?php
         require_once("../php/config.php");
-        require_once("../php/query.php");
+        require_once("../php/getReservation.php");
 
         if(isset($_GET['all'])) {
             $sql = "SELECT id, name, phone, date, time, people, allergies FROM reservations";
