@@ -1,11 +1,10 @@
 <?php 
     include("config.php");
-    
-    $USERS = array();
 
     $sql = "SELECT * FROM adminlogin";
     $result = $conn->query($sql);
-
+    $USERS = array();
+    
     while($row = mysqli_fetch_assoc($result)){
         $USERS[$row['adminname']] = $row['password'];
     }

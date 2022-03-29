@@ -15,7 +15,6 @@
     session_start();
     include("../php/passwords.php");
     check_logged();
-    // echo ($_SESSION["logged"]); // !!!! REMOVE
 
     function expiredTime($msg) {
         echo '<script type="text/javascript">';
@@ -33,7 +32,6 @@
         $expireAfterSeconds = $expireAfterMinute * 60;
 
         if ($secondsInactive >= $expireAfterSeconds) {
-            // killing the session
             session_unset();
             session_destroy();
             expiredTime("Your time is expired! Login another time");
@@ -42,7 +40,7 @@
         $_SESSION['last_reload'] = time();
     }
 
-    //reload the page every minute, to see to see the latest bookings
+    //reload the page every minute, in order to see the latest bookings
     echo '<script type="text/javascript">
             setTimeout(function (){ location.reload() }, 1000*60*1);
             </script>';
@@ -50,21 +48,13 @@
 
     <button id="back-on-top" title="back on top"><img class="center" src="../images/arrowUp.png" alt="arrow Up"></button>
     <!--show reservation of a specific day-->
-    <nav id="days">
-        <ul>
-            <!-- <li><a href="#">Today</a></li>
-            <li><a href="#">Tomorrow</a></li>
-            <li><a href="#">After Tomorrow</a></li> -->
-            <li class="right" id="login-page"><a class="logout-link" href="./logout.html">Logout</a></li>
-        </ul>
-    </nav>
-    <!--options-->
     <div>
         <form method="get" id="options">
             <input type="submit" name="today" value="Today"/>
             <input type="submit" name="today+1" value="Tomorrow"/>
             <input type="submit" name="today+2" value="After Tomorrow"/>
             <input type="submit" name="all" value="All"/>
+            <input type="submit" name="logout" class="logout" value="Logout">
         </form>
     </div>
 
@@ -87,6 +77,12 @@
             $result = $conn->query($sql);
         }
 
+        if(isset($_GET['logout'])) {
+            header("Location: ./logout.html");
+            session_unset();
+            session_destroy();
+        }
+
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
@@ -96,7 +92,7 @@
                 "Allergies: " . $row["allergies"] . "</div>";
             }
         } else {
-            echo "0 results";
+            echo '<p style="text-align:center">0 results</p>';
         }
     ?>
     <footer id="footer">

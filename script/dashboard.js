@@ -1,4 +1,4 @@
-let todayButton = document.getElementById("today");
+let todayButton = document.getElementById("logout-page");
 
 // todayButton.addEventListener("click", ()=>{
 //     const result = <?php 
