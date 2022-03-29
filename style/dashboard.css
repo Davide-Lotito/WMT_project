@@ -41,11 +41,6 @@ body {
     text-transform: uppercase;
 }
 
-#options input[type=submit] .red{
-    background-color: red;
-    margin-left: 5%;
-}
-
 #options input[type=submit]:hover{
     background: #286b39;
 }
