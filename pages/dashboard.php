@@ -54,7 +54,7 @@
             <input type="submit" name="today+1" value="Tomorrow"/>
             <input type="submit" name="today+2" value="After Tomorrow"/>
             <input type="submit" name="all" value="All"/>
-            <input type="submit" name="logout" class="logout" value="Logout">
+            <input type="submit" name="logout" id="logout" value="Logout">
         </form>
     </div>
 

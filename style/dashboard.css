@@ -41,8 +41,18 @@ body {
     text-transform: uppercase;
 }
 
+#options input[type=submit] .red{
+    background-color: red;
+    margin-left: 5%;
+}
+
 #options input[type=submit]:hover{
-    background: orange;
+    background: #286b39;
+}
+
+#options input[type=submit]:active {
+    background-color: #3e8e41;
+    transform: translateY(4px);
 }
 
 .date{
@@ -52,10 +62,5 @@ body {
 
 .id{
     text-decoration: underline;
-}
-
-#options input[type=submit] .logout{
-    background-color: red;
-    margin-left: 5%;
 }
 
