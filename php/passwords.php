@@ -12,7 +12,7 @@
     function wrong($msg) {
         echo '<script type="text/javascript">';
         echo 'alert("'.$msg.'");';
-        echo 'window.location = "../pages/login.php"';
+        echo 'window.location = "../pages/login.html"';
         echo '</script>';
     }
 
