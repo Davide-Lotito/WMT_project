@@ -61,7 +61,7 @@
     <p id="counter">
         <?php
             include("../php/counter.php");
-            echo "There are " . "<em class='value'> " . reservations($conn) . "/50" . "</em>" . " people booked for today!";
+            echo "There are " . "<em class='value'> " . reservations($conn) . "/50" . "</em>" . " people booked for the next turn!";
         ?>
     </p>
     <?php

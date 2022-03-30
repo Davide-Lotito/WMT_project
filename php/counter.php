@@ -2,7 +2,12 @@
 <?php
     function reservations($conn){
         $d = date("Y-m-d", strtotime('today'));
-        $sql = "SELECT `people` FROM `reservations` WHERE `date` = '$d' ";
+        if(date('H:i:s', time()) > '17:00'){
+            $turn = 'af';
+        } else {
+            $turn = 'mo';
+        }
+        $sql = "SELECT `people` FROM `reservations` WHERE `date` = '$d' and `turn` = '$turn' ";
 
         $COUNTER=0;
 
