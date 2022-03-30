@@ -60,8 +60,8 @@ body {
 
 #counter{
     position: relative;
-    width: 50%;
-    left: 25%; right: 25%;
+    width: 80%;
+    left: 10%; right: 10%;
     font-size: 2em;
     text-align: center;
     transition: 1s;
@@ -86,7 +86,7 @@ body {
         background-color: #41ad5c;
         margin-top: 1%; margin-bottom: 1%;
         position: relative;
-        width: 33%;
+        width: 45%;
         color: #fff;
         padding: 1em;
         text-decoration: none;
@@ -94,5 +94,12 @@ body {
         font-size: 1em;
         text-transform: none;
         border-radius: 0;
+    }
+    #counter{
+        font-style: 1em;
+        text-align: justify;
+    }
+    #counter:hover{
+        transform: scale(1.1);
     }
 }
