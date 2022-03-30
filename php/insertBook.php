@@ -1,5 +1,6 @@
 <?php
     require_once("config.php");
+    require_once("counter.php");
 
     function correctInsert($msg) {
         echo '<script type="text/javascript">';
@@ -16,14 +17,16 @@
         $number = ($_GET["quantity"]);
         $allergies = ($_GET["allergies"]);
 
-
-        $sql = "INSERT INTO reservations (id, name, phone, date, time, people, allergies) 
-        VALUES (NULL, '$name', '$phone', '$date', '$time', '$number', '$allergies')";
-
-        if ($conn->query($sql) === TRUE) {
-            correctInsert("Reservation made correctly");
+        if(reservationsByDate($date, $conn, $number)){
+            $sql = "INSERT INTO reservations (id, name, phone, date, time, people, allergies) 
+                    VALUES (NULL, '$name', '$phone', '$date', '$time', '$number', '$allergies')";
+            if ($conn->query($sql) === TRUE) {
+                correctInsert("Reservation made correctly");
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            } 
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            correctInsert("too many people booked for " . $date);
         }
 
         $conn->close();
