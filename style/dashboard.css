@@ -58,6 +58,24 @@ body {
     text-decoration: underline;
 }
 
+#counter{
+    position: relative;
+    width: 50%;
+    left: 25%; right: 25%;
+    font-size: 2em;
+    text-align: center;
+    transition: 1s;
+}
+
+#counter:hover{
+    transform: scale(1.5);
+}
+
+.value{
+    color: red;
+    border: 2px blue solid;
+    transition: 2s;
+}
 
 @media (max-width: 830px) {
     #item{

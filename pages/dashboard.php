@@ -57,10 +57,18 @@
             <input type="submit" name="logout" value="Logout">
         </form>
     </div>
-
+    <!--reservation counter-->
+    <p id="counter">
+        <?php
+            include("../php/counter.php");
+            echo "There are " . "<em class='value'> " . reservations($conn) . "/50" . "</em>" . " people booked for today!";
+        ?>
+    </p>
     <?php
         require_once("../php/config.php");
         require_once("../php/getReservation.php");
+        require_once("../php/deleteOld.php");
+        deleteOldReservation($conn);
 
         if(isset($_GET['all'])) {
             $sql = "SELECT id, name, phone, date, time, people, allergies FROM reservations";
