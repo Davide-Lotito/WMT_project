@@ -3,7 +3,6 @@ body {
     padding: 0;
     font-size: 100%;
     font-family: Verdana, sans-serif;
-    /* font-family: "Indie Flower"; */
     color: white;
     background-color: rgb(150, 150, 150);
 }
@@ -59,3 +58,23 @@ body {
     text-decoration: underline;
 }
 
+
+@media (max-width: 830px) {
+    #item{
+        padding: 0;
+        font-size: 1em;
+    }
+    #options input[type=submit] {
+        background-color: #41ad5c;
+        margin-top: 1%; margin-bottom: 1%;
+        position: relative;
+        width: 33%;
+        color: #fff;
+        padding: 1em;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 1em;
+        text-transform: none;
+        border-radius: 0;
+    }
+}
