@@ -17,9 +17,15 @@
         $number = ($_GET["quantity"]);
         $allergies = ($_GET["allergies"]);
 
+        if($time > '17:00'){
+            $turn = 'af';
+        } else {
+            $turn = 'mo';
+        }
+
         if(reservationsByDate($date, $conn, $number)){
-            $sql = "INSERT INTO reservations (id, name, phone, date, time, people, allergies) 
-                    VALUES (NULL, '$name', '$phone', '$date', '$time', '$number', '$allergies')";
+            $sql = "INSERT INTO reservations (id, name, phone, date, time, turn, people, allergies) 
+                    VALUES (NULL, '$name', '$phone', '$date', '$time', '$turn', '$number', '$allergies')";
             if ($conn->query($sql) === TRUE) {
                 correctInsert("Reservation made correctly");
             } else {
