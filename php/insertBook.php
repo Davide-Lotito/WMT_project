@@ -23,7 +23,7 @@
             $turn = 'mo';
         }
 
-        if(reservationsByDate($date, $conn, $number)){
+        if(reservationsByDate($date, $conn, $number, $turn)){
             $sql = "INSERT INTO reservations (id, name, phone, date, time, turn, people, allergies) 
                     VALUES (NULL, '$name', '$phone', '$date', '$time', '$turn', '$number', '$allergies')";
             if ($conn->query($sql) === TRUE) {

@@ -14,9 +14,8 @@
         return $COUNTER;
     }
 
-    function reservationsByDate($date, $conn, $value){
-        // $d = date("Y-m-d", strtotime($dayName));
-        $sql = "SELECT `people` FROM `reservations` WHERE `date` = '$date' ";
+    function reservationsByDate($date, $conn, $value, $turn){
+        $sql = "SELECT `people` FROM `reservations` WHERE `date` = '$date' and `turn` = '$turn' ";
 
         $COUNTER=$value;
         $COUNTERMAX=50;
