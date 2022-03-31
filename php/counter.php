@@ -2,7 +2,7 @@
 <?php
     function reservations($conn){
         $d = date("Y-m-d", strtotime('today'));
-        if(date('H:i:s', time()) > '17:00'){
+        if(date('H:i:s', time()+7200) > '16:00'){
             $turn = 'af';
         } else {
             $turn = 'mo';
