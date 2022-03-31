@@ -71,7 +71,8 @@
         deleteOldReservation($conn);
 
         if(isset($_GET['all'])) {
-            $sql = "SELECT id, name, phone, date, time, people, allergies FROM reservations";
+            // $sql = "SELECT id, name, phone, date, time, people, allergies FROM reservations";
+            $sql = "SELECT * FROM `reservations` ORDER BY `reservations`.`date` ASC ";
             $result = $conn->query($sql);
         }else if(isset($_GET['today'])) {
             $result = getResults("today",$conn);
@@ -80,9 +81,8 @@
         } else if(isset($_GET['today+2'])) {
             $result = getResults("+2 day",$conn);
         } else {
-            //default shows all the reservations
-            $sql = "SELECT id, name, phone, date, time, people, allergies FROM reservations";
-            $result = $conn->query($sql);
+            //default shows the reservations for today
+            $result = getResults("today",$conn);
         }
 
         if(isset($_GET['logout'])) {
