@@ -40,6 +40,10 @@ body {
     text-transform: uppercase;
 }
 
+#options input[type=submit] .logout{
+    background-color: red;
+}
+
 #options input[type=submit]:hover{
     background: #286b39;
 }
