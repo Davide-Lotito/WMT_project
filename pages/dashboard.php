@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../style/common.css">
     <link rel="stylesheet" href="../style/dashboard.css">
     <link rel="icon" type="image/png" href="../images/chef_white_icon.png">
+    <meta name="description" content="Website of a restaurant. This is a project for the exam Web and Multimedia Technologies, University of Pavia, Italy">
+    <meta name="author" content="Lotito Davide Pio">
 </head>
 <body>
     <?php
