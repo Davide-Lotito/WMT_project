@@ -196,7 +196,7 @@ function timeCorrection(time, timeO){
 }
 
 /**
- * Check if the inserted name has at least 5 characters and if they are only letters & numbers
+ * Check if the inserted name has at least 5 characters and if they are only letters
  * @param {*} name 
  * @returns true if is ok
  */
@@ -211,11 +211,11 @@ function isValidName(name) {
 }
 
 /**
- * Check if the inserted name has at least 5 characters and if they are only letters & numbers
+ * Check if the inserted name has at least 5 characters and if they are only letters
  * @param {*} name 
  * @returns true if is ok
  */
- function isValidString(string) {
+function isValidString(string) {
     const regex = new RegExp('^[a-zA-Z]+$');
     if ((string.length < 3 || !regex.test(string)) && empty(string)){
         alert(`Wrong allergies! At least 3 characters and only letters`);
