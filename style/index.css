@@ -1,11 +1,14 @@
 .slideshow-container {
-  margin: auto;
+  position: relative;
   width: 80%;
   left: 10%;
 }
 
-.single-slide {
+.single-slide{
   display: none;
+}
+
+.single-slide img{
   position: relative;
   width: 60%;
   left: 20%;
@@ -95,6 +98,11 @@
   #big-menu-button{
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+  }
+  .single-slide img{
+    position: relative;
+    width: 100%;
+    left: 0%;
   }
 }
 
