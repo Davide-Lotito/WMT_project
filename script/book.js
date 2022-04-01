@@ -93,8 +93,6 @@ function checkTime(time, timeO) {
     let currentDate = new Date();
     let currentHours = currentDate.getHours();
     let currentMinutes = currentDate.getMinutes();
-    // let currentTime = `${currentHours}:${currentMinutes}`;
-
     let hours = getHoursMinutes(time)[0];
     let minutes = getHoursMinutes(time)[1];
 
@@ -192,10 +190,22 @@ function timeCorrection(time, timeO){
     for(let i = 0; i < 60/THRESHOLD; i++){
         if (minuteI > THRESHOLD*i && minuteI < THRESHOLD*(i+1)) {
             let a = (i == 0) ? "0" : "";
-            // let b = ((THRESHOLD*(i+1) - minuteI) < Math.round((i+1)*THRESHOLD/2)) ? 1 : 0;
-            // timeO.value = `${hourI}:${a+((i+b)*THRESHOLD)}`;
             timeO.value = `${hourI}:${a+i*THRESHOLD}`;
         }
+    }
+}
+
+/**
+ * Check if the inserted name has at least 5 characters and if they are only letters & numbers
+ * @param {*} name 
+ * @returns true if name is ok
+ */
+function isValidName(name) {
+    if (typeof name !== "string" || name.length !== 5 || /[^A-Za-z0-9]/){
+        alert(`Wrong name! At least 5 characters and only letters and numbers`);
+        return false;
+    } else {
+        return true;
     }
 }
 
@@ -224,16 +234,28 @@ const THRESHOLD = 15;
 
 
 // ---------------------- EVENTS HANDLING ------------------------ //
-submitButton = document.getElementById("submit-button");
-formBook = document.getElementById("form");
+formBook = document.getElementById("book-form");
 dateButton = document.getElementById("date");
 timeButton = document.getElementById("time");
+nameButton = document.getElementById("name");
 
 dateButton.addEventListener("change", () => {
     const dateO = document.getElementById("date");
     let date = dateO.value;
     checkDate(date, dateO);
-})
+});
+
+dateButton.addEventListener("focusout", () => {
+    const dateO = document.getElementById("date");
+    let date = dateO.value;
+    checkDate(date, dateO);
+});
+
+nameButton.addEventListener("change", () => {
+    const nameO = document.getElementById("name");
+    let name = nameO.value;
+    isValidName(name);
+});
 
 timeButton.addEventListener("focusout", () => {
     const timeO = document.getElementById("time");
@@ -246,4 +268,23 @@ timeButton.addEventListener("focusout", () => {
         timeCorrection(time, timeO);
     }
    
+});
+
+formBook.addEventListener("submit", (ev)=>{
+    ev.preventDefault();
+    const dateO = document.getElementById("date");
+    let date = dateO.value;
+    const timeO = document.getElementById("time");
+    let time = timeO.value;
+    
+    if(checkDate(date, dateO) && today && checkTime(time,timeO)){
+        today = false;
+        if (checkDayHour(time, timeO)){
+            timeCorrection(time, timeO);
+            formBook.submit();
+            return true;
+        }
+    } else {
+        return false;
+    }
 });
