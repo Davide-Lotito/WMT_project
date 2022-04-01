@@ -279,9 +279,7 @@ dateButton.addEventListener("change", () => {
 });
 
 allergiesButton.addEventListener("change", () => {
-    const allergiesO = document.getElementById("allergies");
-    let allergies = allergiesO.value;
-    isValidString(allergies);
+    isValidString(document.getElementById("allergies").value);
 });
 
 dateButton.addEventListener("focusout", () => {
@@ -291,15 +289,11 @@ dateButton.addEventListener("focusout", () => {
 });
 
 nameButton.addEventListener("change", () => {
-    const nameO = document.getElementById("name");
-    let name = nameO.value;
-    isValidName(name);
+    isValidName(document.getElementById("name").value);
 });
 
 numberButton.addEventListener("change", () => {
-    const numberO = document.getElementById("phone");
-    let number = numberO.value;
-    isValidNumber(number);
+    isValidNumber(document.getElementById("phone").value);
 });
 
 timeButton.addEventListener("focusout", () => {
