@@ -7,7 +7,7 @@
         } else {
             $turn = 'mo';
         }
-        $sql = "DELETE FROM `reservations` WHERE `date` = '$d' and `turn` != '$turn' ";
+        $sql = "DELETE FROM `reservations` WHERE `date` < '$d' and `turn` != '$turn' ";
         $result = $conn->query($sql);
         return $result;
     }

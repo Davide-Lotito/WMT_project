@@ -61,7 +61,12 @@
     <p id="counter">
         <?php
             include("../php/counter.php");
-            echo "There are " . "<em class='value'> " . reservations($conn) . "/50" . "</em>" . " people booked for the next turn!";
+            if(date('H:i:s', time()+7200) > '16:00'){
+                $turn = 'dinner';
+            } else {
+                $turn = 'lunch';
+            }
+            echo "There are " . "<em class='value'> " . reservations($conn) . "/50" . "</em>" . " people booked for the " . $turn . " shift!";
         ?>
     </p>
     <?php
