@@ -198,12 +198,27 @@ function timeCorrection(time, timeO){
 /**
  * Check if the inserted name has at least 5 characters and if they are only letters & numbers
  * @param {*} name 
- * @returns true if name is ok
+ * @returns true if is ok
  */
 function isValidName(name) {
     const regex = new RegExp('^[a-zA-Z]+$');
     if ((name.length < 5 || !regex.test(name)) && empty(name)){
-        alert(`Wrong name! At least 5 characters and only letters and numbers`);
+        alert(`Wrong name! At least 5 characters and only letters`);
+        return false;
+    } else {
+        return true;
+    }
+}
+
+/**
+ * Check if the inserted name has at least 5 characters and if they are only letters & numbers
+ * @param {*} name 
+ * @returns true if is ok
+ */
+ function isValidString(string) {
+    const regex = new RegExp('^[a-zA-Z]+$');
+    if ((string.length < 3 || !regex.test(string)) && empty(string)){
+        alert(`Wrong allergies! At least 3 characters and only letters`);
         return false;
     } else {
         return true;
@@ -255,11 +270,18 @@ dateButton = document.getElementById("date");
 timeButton = document.getElementById("time");
 nameButton = document.getElementById("name");
 numberButton = document.getElementById("phone");
+allergiesButton = document.getElementById("allergies");
 
 dateButton.addEventListener("change", () => {
     const dateO = document.getElementById("date");
     let date = dateO.value;
     checkDate(date, dateO);
+});
+
+allergiesButton.addEventListener("change", () => {
+    const allergiesO = document.getElementById("allergies");
+    let allergies = allergiesO.value;
+    isValidString(allergies);
 });
 
 dateButton.addEventListener("focusout", () => {
