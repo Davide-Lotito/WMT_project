@@ -201,8 +201,24 @@ function timeCorrection(time, timeO){
  * @returns true if name is ok
  */
 function isValidName(name) {
-    if (typeof name !== "string" || name.length !== 5 || /[^A-Za-z0-9]/){
+    const regex = new RegExp('^[a-zA-Z]+$');
+    if ((name.length < 5 || !regex.test(name)) && empty(name)){
         alert(`Wrong name! At least 5 characters and only letters and numbers`);
+        return false;
+    } else {
+        return true;
+    }
+}
+
+/**
+ * Check if the inserted phone number has between 7-15 digits and if they are only numbers
+ * @param {*} number 
+ * @returns true if phone number is ok
+ */
+ function isValidNumber(number) {
+    const regex = new RegExp('^[0-9]+$');
+    if ((!(number.length >= 7 && number.length <= 15) || !regex.test(number)) && empty(number)){
+        alert(`Wrong phone number! Between 7-15 digits in your phone number`);
         return false;
     } else {
         return true;
@@ -238,6 +254,7 @@ formBook = document.getElementById("book-form");
 dateButton = document.getElementById("date");
 timeButton = document.getElementById("time");
 nameButton = document.getElementById("name");
+numberButton = document.getElementById("phone");
 
 dateButton.addEventListener("change", () => {
     const dateO = document.getElementById("date");
@@ -255,6 +272,12 @@ nameButton.addEventListener("change", () => {
     const nameO = document.getElementById("name");
     let name = nameO.value;
     isValidName(name);
+});
+
+numberButton.addEventListener("change", () => {
+    const numberO = document.getElementById("phone");
+    let number = numberO.value;
+    isValidNumber(number);
 });
 
 timeButton.addEventListener("focusout", () => {
