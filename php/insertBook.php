@@ -1,3 +1,4 @@
+<!--Script useful to insert reservations in the DB-->
 <?php
     require_once("config.php");
     require_once("counter.php");

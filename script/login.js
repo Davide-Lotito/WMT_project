@@ -1,4 +1,13 @@
 /**
+ * Check if is empty
+ * @param {*} input
+ * @returns true if is not empty
+ */
+ function empty(input) {
+    return (input == "") ? false : true;
+}
+
+/**
  * Check if password is bigger than MINCHARACTERS and
  * smaller than MAXCHARACTERS
  * @param {*} input
@@ -52,42 +61,11 @@ function numbers(input) {
     return (m >= NUMBERS) ? true : false;
 }
 
-//----------------------- GLOBAL VARIABLES ----------------------- //
-const MINCHARACTERS = 5;
-const MAXCHARACTERS = 10;
-const UPPERCASE = 1;
-const LOWERCASE = 2;
-const NUMBERS = 1;
-
-// ---------------------- EVENTS HANDLING ------------------------ //
-const passwordO = document.getElementById("pswd");
-const formO = document.getElementById("form");
-const submit = document.getElementById("submit-button");
-const showO = document.getElementById("show-pswd");
-
-// passwordO.addEventListener("focusout", () => {
-//     let pswd = passwordO.value;
-
-//     if (!size(pswd)) {
-//         alert(`Wrong password! At least ${MINCHARACTERS} and maximum ${MAXCHARACTERS}`);
-//         return 0;
-//     }
-//     if (!upperCase(pswd)) {
-//         alert(`Wrong password! At least ${UPPERCASE} characters in upper case`);
-//         return 0
-//     }
-//     if (!lowerCase(pswd)) {
-//         alert(`Wrong password! At least ${LOWERCASE} characters in lower case`);
-//         return 0
-//     }
-//     if (!numbers(pswd)) {
-//         alert(`Wrong password! At least ${NUMBERS} characters have to be numbers`);
-//         return 0
-//     }
-// });
-
-passwordO.addEventListener("change", () => {
-    let pswd = passwordO.value;
+/**
+ * Help to handle tha password's controls
+ * @param {*} pswd 
+ */
+function helpCheckPassword(pswd){
 
     if (!size(pswd)) {
         alert(`Wrong password! At least ${MINCHARACTERS} and maximum ${MAXCHARACTERS}`);
@@ -105,28 +83,41 @@ passwordO.addEventListener("change", () => {
         alert(`Wrong password! At least ${NUMBERS} characters have to be numbers`);
         return 0
     }
+}
+
+/**
+ * Check the length of the name
+ * @param {*} name 
+ * @returns 
+ */
+function isValidName(name) {
+    if ((!(name.length >= 5 && name.length <= 15)) || empty(number)){
+        alert(`Wrong name! Between 5-15 characters`);
+        return false;
+    } else {
+        return true;
+    }
+}
+
+//----------------------- GLOBAL VARIABLES ----------------------- //
+const MINCHARACTERS = 5;
+const MAXCHARACTERS = 10;
+const UPPERCASE = 1;
+const LOWERCASE = 2;
+const NUMBERS = 1;
+
+// ---------------------- EVENTS HANDLING ------------------------ //
+const passwordO = document.getElementById("pswd");
+const nameO = document.getElementById("name");
+const showO = document.getElementById("show-pswd");
+
+passwordO.addEventListener("change", () => {
+    helpCheckPassword(passwordO.value);
 });
 
-// submit.addEventListener("click", () => {
-//     let pswd = passwordO.value;
-
-//     if (!size(pswd)) {
-//         alert(`Wrong password! At least ${MINCHARACTERS} and maximum ${MAXCHARACTERS}`);
-//         return 0;
-//     }
-//     if (!upperCase(pswd)) {
-//         alert(`Wrong password! At least ${UPPERCASE} characters in upper case`);
-//         return 0
-//     }
-//     if (!lowerCase(pswd)) {
-//         alert(`Wrong password! At least ${LOWERCASE} characters in lower case`);
-//         return 0
-//     }
-//     if (!numbers(pswd)) {
-//         alert(`Wrong password! At least ${NUMBERS} characters have to be numbers`);
-//         return 0
-//     }
-// });
+nameO.addEventListener("change", () => {
+    isValidName(nameO.value);
+});
 
 /**
  * Show the password field

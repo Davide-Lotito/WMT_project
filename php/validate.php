@@ -1,3 +1,4 @@
+<!--Script useful to check username and password-->
 <?php
     include("./config.php");
     session_start();

@@ -1,3 +1,4 @@
+<!--Script useful to check the password in order to do not access at the 'dashboard' page if not admin user-->
 <?php 
     include("config.php");
 

@@ -56,11 +56,11 @@ function checkDate(date, dateO) {
                 if (month == currentMonth) {
                     if (day >= currentDay) {
                         if (day == currentDay) {
-                            console.log(`The reservation is today (${date})`);
+                            // console.log(`The reservation is today (${date})`);
                             today = true;
                             return true;
                         }
-                        console.log(`The reservation is in this month (${date})`);
+                        // console.log(`The reservation is in this month (${date})`);
                         return true;
                     } else {
                         alert("Invalid Date --> invalid day");
@@ -68,7 +68,7 @@ function checkDate(date, dateO) {
                         return false;
                     }
                 }
-                console.log(`The reservation is in this year (${getMonthName(month)})`);
+                // console.log(`The reservation is in this year (${getMonthName(month)})`);
                 return true;
             } else {
                 alert("Invalid Date --> invalid month");
@@ -103,7 +103,7 @@ function checkTime(time, timeO) {
     if (hours >= currentHours) {
         if (hours == currentHours) {
             if (minutes >= currentMinutes) {
-                console.log(`The reservation is today at the ${time}`);
+                // console.log(`The reservation is today at the ${time}`);
                 return true;
             } else {
                 alert("Invalid Time --> minutes");
@@ -111,7 +111,7 @@ function checkTime(time, timeO) {
                 return false;
             }
         }
-        console.log(`The reservation is today at the ${time}`);
+        // console.log(`The reservation is today at the ${time}`);
         return true;
     } else {
         alert("Invalid Time --> hours");
@@ -139,7 +139,6 @@ function checkDayHour(time, timeO) {
     let result;
     function checks(map) {
         let hour = getHoursMinutes(time)[0];
-        console.log(hour)
         if (hour < 17) {
             return (hour >= map.get("morning-start") && hour < map.get("morning-end"));
         } else {
@@ -171,7 +170,7 @@ function checkDayHour(time, timeO) {
             break;
     }
     if (result) {
-        console.log(`Time consistent with the resturant's schedule (${getHoursMinutes(time)[0]})`);
+        // console.log(`Time consistent with the resturant's schedule (${getHoursMinutes(time)[0]})`);
         return true;
     } else {
         alert(`Time is -not- consistent with the resturant's schedule`);
@@ -230,7 +229,7 @@ function isValidString(string) {
  * @param {*} number 
  * @returns true if phone number is ok
  */
- function isValidNumber(number) {
+function isValidNumber(number) {
     const regex = new RegExp('^[0-9]+$');
     if ((!(number.length >= 7 && number.length <= 15) || !regex.test(number)) && empty(number)){
         alert(`Wrong phone number! Between 7-15 digits in your phone number`);
@@ -273,19 +272,17 @@ numberButton = document.getElementById("phone");
 allergiesButton = document.getElementById("allergies");
 
 dateButton.addEventListener("change", () => {
-    const dateO = document.getElementById("date");
-    let date = dateO.value;
-    checkDate(date, dateO);
+    let date = dateButton.value;
+    checkDate(date, dateButton);
+});
+
+dateButton.addEventListener("focusout", () => {
+    let date = dateButton.value;
+    checkDate(date, dateButton);
 });
 
 allergiesButton.addEventListener("change", () => {
     isValidString(document.getElementById("allergies").value);
-});
-
-dateButton.addEventListener("focusout", () => {
-    const dateO = document.getElementById("date");
-    let date = dateO.value;
-    checkDate(date, dateO);
 });
 
 nameButton.addEventListener("change", () => {
@@ -297,29 +294,26 @@ numberButton.addEventListener("change", () => {
 });
 
 timeButton.addEventListener("focusout", () => {
-    const timeO = document.getElementById("time");
-    let time = timeO.value;
+    let time = timeButton.value;
     if (today) {
-        checkTime(time,timeO);
+        checkTime(time,timeButton);
         today = false;
     }
-    if (checkDayHour(time, timeO)){
-        timeCorrection(time, timeO);
+    if (checkDayHour(time, timeButton)){
+        timeCorrection(time, timeButton);
     }
    
 });
 
 formBook.addEventListener("submit", (ev)=>{
     ev.preventDefault();
-    const dateO = document.getElementById("date");
-    let date = dateO.value;
-    const timeO = document.getElementById("time");
-    let time = timeO.value;
+    let date = dateButton.value;
+    let time = timeButton.value;
     
-    if(checkDate(date, dateO) && today && checkTime(time,timeO)){
+    if(checkDate(date, dateButton) && today && checkTime(time,timeButton)){
         today = false;
-        if (checkDayHour(time, timeO)){
-            timeCorrection(time, timeO);
+        if (checkDayHour(time, timeButton)){
+            timeCorrection(time, timeButton);
             formBook.submit();
             return true;
         }
