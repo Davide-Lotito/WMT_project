@@ -48,7 +48,7 @@
         position: relative;
         width: 80%;
         left: 10%;
-        text-align: justify;
+        text-align: center;
     }
     #bottom img{
         display: none;
@@ -59,6 +59,6 @@
         position: relative;
         width: 80%;
         left: 10%;
-        text-align: justify;
+        text-align: center;
     }
 }
