@@ -15,21 +15,23 @@
 </head>
 
 <body>
+    <!--hidden link, in order to make the site more usable-->
+    <a href="#food-menu" class="hidden">Go to the main content</a>
     <nav id="menu">
         <button id="back-on-top" title="back on top"><img class="center"
                 src="../images/arrowUp.png" alt="arrow Up"></button>
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a class="active" href="./menu.html">Menu</a></li>
-            <li><a href="./book.html">Reserve</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contacts.html">Contacts</a></li>
-            <li class="right" id="login-page"><a class="login-link" href="./login.html">Login</a></li>
+            <li><a href="../index.html" title="back to the home page">Home</a></li>
+            <li><a class="active" href="./menu.html" title="link for this page">Menu</a></li>
+            <li><a href="./book.html" title="go to the reservations page">Reserve</a></li>
+            <li><a href="./about.html" title="go to the about page">About</a></li>
+            <li><a href="./contacts.html" title="go to the contacts page">Contacts</a></li>
+            <li class="right" id="login-page"><a class="login-link" href="./login.html" title="go to the login page">Login</a></li>
         </ul>
     </nav>
     <!--title box area-->
     <div id="title-area">
-        <a href="../index.html"><img src="../images/chef_white_icon.png" alt="restaurant icon" title="icon"></a>
+        <a href="../index.html"><img src="../images/chef_white_icon.png" alt="restaurant icon" title="back to the home page"></a>
         <h1 id="title-text" class="title-font">Restaurant Pizzeria da Davide</h1>
     </div>
     <!--progress bar-->
@@ -42,17 +44,17 @@
     <!-- Menu -->
     <main id="food-menu">
         <div id="menu-select" class="row">
-            <a href="javascript:void(0)" id="pizza-link">
+            <a href="javascript:void(0)" id="pizza-link" title="part of the menu dedicated at pizzas">
                 <!-- href="javascript:void(0)" in order to say to the browser to stays on the same page-->
                 <div class="tab column">Pizza</div>
             </a>
-            <a href="javascript:void(0)" id="pasta-link">
+            <a href="javascript:void(0)" id="pasta-link" title="part of the menu dedicated at pasta">
                 <div class="tab column" >Pasta</div>
             </a>
-            <a href="javascript:void(0)" id="main-link">
+            <a href="javascript:void(0)" id="main-link" title="part of the menu dedicated at main courses">
                 <div class="tab column">Main Course</div>
             </a>
-            <a href="javascript:void(0)" id="dessert-link">
+            <a href="javascript:void(0)" id="dessert-link" title="part of the menu dedicated at desserts">
                 <div class="tab column">Dessert</div>
             </a>
         </div>
@@ -113,7 +115,6 @@
             <p> <b>flavors:</b> chocolate, cream, lemon and strawberry</p>
             <hr>
             <h1 class="food-name">Warm chocolate fondant <span>$10.00</span></h1>
-            <!-- <p> <b>flavors:</b> chocolate, cream, lemon and strawberry</p> -->
             <hr>
             <h1 class="food-name">Sorbet <span>$9.00</span></h1>
             <p> <b>flavors:</b> coconut, lemon</p>
@@ -122,17 +123,17 @@
 
     <!--explain-->
     <p id="explain">
-        Vegetarian <img src="https://media.giphy.com/media/otnlSv6F8S129TBX9L/giphy.gif" alt="vegetarian"> - 
-        Vegan <img src="https://media.giphy.com/media/nUVr18m5zaEDGZtA6m/giphy.gif" alt="vegan"><br>
+        Vegetarian <img src="https://media.giphy.com/media/otnlSv6F8S129TBX9L/giphy.gif" alt="vegetarian" title="vegeratian logo"> - 
+        Vegan <img src="https://media.giphy.com/media/nUVr18m5zaEDGZtA6m/giphy.gif" alt="vegan" title="vegan logo"><br>
         <span> Plese let your server know if you have any food allergy</span>
     </p>
     <footer id="footer">
         &copy; Copyright 2022 <br> Da Davide Restaurant
         <br>
         <div class="social-links">
-            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
-            <a href="https://www.twitter.com/" class="fa fa-twitter" target="_blank"></a>
-            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank" title="go to the facebook page"></a>
+            <a href="https://www.twitter.com/" class="fa fa-twitter" target="_blank" title="go to the twitter page"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank" title="go to the instagram pagess"></a>
         </div>
     </footer>
     <script src="../script/common.js"></script>
