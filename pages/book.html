@@ -15,16 +15,19 @@
 </head>
 
 <body>
+    <!--hidden link, in order to make the site more usable-->
+    <a href="#form" class="hidden">Go to the main content</a>
+    <!--navigation bar-->
     <nav id="menu">
         <button id="back-on-top" title="back on top"><img class="center"
                 src="../images/arrowUp.png" alt="arrow Up"></button>
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./menu.html">Menu</a></li>
-            <li><a class="active" href="./book.html">Reserve</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contacts.html">Contacts</a></li>
-            <li class="right" id="login-page"><a class="login-link" href="./login.html">Login</a></li>
+            <li><a href="../index.html" title="go to the home page">Home</a></li>
+            <li><a href="./menu.html" title="go to the menu page">Menu</a></li>
+            <li><a class="active" href="./book.html" title="link for this page">Reserve</a></li>
+            <li><a href="./about.html" title="go to the about page">About</a></li>
+            <li><a href="./contacts.html" title="go to the contacts page">Contacts</a></li>
+            <li class="right" id="login-page"><a class="login-link" href="./login.html" title="go to the login page">Login</a></li>
         </ul>
     </nav>
     <!--progress bar-->
@@ -35,7 +38,7 @@
     </div>
     <!--title box area-->
     <div id="title-area">
-        <a href="../index.html"><img src="../images/chef_white_icon.png" alt="restaurant icon" title="icon"></a>
+        <a href="../index.html"><img src="../images/chef_white_icon.png" alt="restaurant icon" title="go to the home page"></a>
         <h1 id="title-text" class="title-font">Restaurant Pizzeria da Davide</h1>
     </div>
     <h2 class="center title-font title-minor">Reserve</h2>
@@ -45,14 +48,20 @@
         <form action="../php/insertBook.php" method="get" id="book-form">
             <fieldset>
                 <legend><span class="number">1</span>General Info</legend>
+                <label for="name" class="hidden">Insert your name:</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="tel"class="hidden">Insert your phone-number:</label>
                 <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                <label for="date" class="hidden">Insert the date:</label>
                 <input type="date" id="date" name="date" required>
+                <label for="time" class="hidden">Insert the time:</label>
                 <input type="time" id="time" name="time" title="When inted to arrive" required>
+                <label for="number" class="hidden">Insert the number of people:</label>
                 <input type="number" id="quantity" name="quantity" placeholder="How many people" required min="1" max="50">
             </fieldset>
             <fieldset>
                 <legend><span class="number replaced">2</span> Additional Info</legend>
+                <label for="allergies" class="hidden">Enter any allergies:</label>
                 <textarea name="allergies" id="allergies" placeholder="Add any food allergies"></textarea>
             </fieldset>
             <input type="submit" id="submit-button" value="Apply" />
@@ -92,9 +101,9 @@
         &copy; Copyright 2022 <br> Da Davide Restaurant
         <br>
         <div class="social-links">
-            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
-            <a href="https://www.twitter.com/" class="fa fa-twitter" target="_blank"></a>
-            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank" title="go the facebook page"></a>
+            <a href="https://www.twitter.com/" class="fa fa-twitter" target="_blank" title="go to the twitter page"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank" title="go to the instagram page"></a>
         </div>
     </footer>
     <script src="../script/common.js"></script>
