@@ -221,3 +221,7 @@ span{
     opacity: 0.9;
     width: 0%;
 }
+
+.hidden{
+    display: none;
+}

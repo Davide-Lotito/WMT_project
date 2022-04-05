@@ -12,16 +12,18 @@
     <meta name="author" content="Lotito Davide Pio">
 </head>
 <body>
+    <!--hidden link, in order to make the site more usable-->
+    <a href="#brief-description" class="hidden">Go to the main content</a>
     <!--navigation bar-->
     <nav id="menu">
         <button id="back-on-top" title="back on top"><img class="center" src="./images/arrowUp.png" alt="arrow Up"></button>
         <ul>
-            <li><a class="active" href="./index.html">Home</a></li>
-            <li><a href="./pages/menu.html">Menu</a></li>
-            <li><a href="./pages/book.html">Reserve</a></li>
-            <li><a href="./pages/about.html">About</a></li>
-            <li><a href="./pages/contacts.html">Contacts</a></li>
-            <li class="right" id="login-page"><a class="login-link" href="./pages/login.html">Login</a></li>
+            <li><a class="active" href="./index.html" title="index page">Home</a></li>
+            <li><a href="./pages/menu.html" title="menu page">Menu</a></li>
+            <li><a href="./pages/book.html" title="reservation page">Reserve</a></li>
+            <li><a href="./pages/about.html" title="about page">About</a></li>
+            <li><a href="./pages/contacts.html" title="contacts page">Contacts</a></li>
+            <li class="right" id="login-page"><a class="login-link" href="./pages/login.html" title="login page">Login</a></li>
         </ul>
     </nav>
     <!--progress bar-->
@@ -37,11 +39,11 @@
     </div> 
     <!--title box area-->
     <div id="title-area">
-        <a href="./index.html"><img src="./images/chef_white_icon.png" alt="restaurant icon" title="icon"></a>
+        <a href="./index.html" title="back to the main page"><img src="./images/chef_white_icon.png" alt="restaurant icon" title="icon"></a>
         <h1 id="title-text" class="title-font">Restaurant Pizzeria da Davide</h1>
     </div>
     <!--small introduction area-->
-    <div id="brief-description" class="row">
+    <div id="brief-description" class="row" name="content">
         <h4 class="left-float"> <em id="trans1" class="name">Ristorante Pizzeria da Davide</em> welcomes its guests in a friendly environment to offer
             contemporary cuisine. <br><br> In addition to pizzas cooked in a wood oven. </h4>
         <img src="./images/inside/inside2.jpg" class="right-float" alt="sala restaurant" title="sala restaurant">
@@ -49,25 +51,25 @@
 
     <!--big menu button-->
     <div id="big-menu-button">
-        <a href="./pages/menu.html">The Menu</a>
+        <a href="./pages/menu.html" title="menu page">The Menu</a>
     </div>
 
     <!-- slideshow container -->
     <main class="slideshow-container">
         <div class="single-slide fade">
-            <img src="./images/foodSS/food1.jpg" title="food 1" alt="food 1">
+            <img src="./images/foodSS/food1.jpg" title="food 1: pokè" alt="food 1: pokè">
         </div>
         <div class="single-slide fade">
-            <img src="./images/foodSS/food2.jpg" title="food 2" alt="food 2">
+            <img src="./images/foodSS/food2.jpg" title="food 2: big salad" alt="food 2: big salad">
         </div>
         <div class="single-slide fade">
-            <img src="./images/foodSS/food3.jpg" title="food 3" alt="food 3">
+            <img src="./images/foodSS/food3.jpg" title="food 3: small salad" alt="food 3: small salad">
         </div>
         <div class="single-slide fade">
-            <img src="./images/foodSS/food4.jpg" title="food 4" alt="food 4">
+            <img src="./images/foodSS/food4.jpg" title="food 4: salad with ham" alt="food 4: salad with ham">
         </div>
         <div class="single-slide fade">
-            <img src="./images/foodSS/food5.jpg" title="food 5" alt="food 5">
+            <img src="./images/foodSS/food5.jpg" title="food 5: pizza" alt="food 5: pizza">
         </div>
         <div class="dots">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -81,9 +83,9 @@
         &copy; Copyright 2022 <br> Da Davide Restaurant
         <br>
         <div class="social-links">
-            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
-            <a href="https://www.twitter.com/" class="fa fa-twitter" target="_blank"></a>
-            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank" title="facebook page"></a>
+            <a href="https://www.twitter.com/" class="fa fa-twitter" target="_blank" title="twitter page"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank" title="instagram page"></a>
         </div>
     </footer>
     <script src="./script/common.js"></script>
