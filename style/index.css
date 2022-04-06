@@ -60,7 +60,7 @@
   to {
     opacity: 1
   }
-}
+} 
 
 #brief-description {
   position: relative;
@@ -104,6 +104,9 @@
     width: 100%;
     left: 0%;
   }
+  .dots {
+    display: none;
+}
 }
 
 #big-menu-button {

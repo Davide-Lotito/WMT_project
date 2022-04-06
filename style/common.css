@@ -82,9 +82,6 @@ body {
     #menu li {
         float: none;
     }
-    .dots {
-        display: none;
-    }
     .center{
         font-size: 1em;
     }
@@ -197,10 +194,6 @@ span{
 .left-float{
     float: left;
     width: 40%;
-}
-
-.title-minor{
-    color: #111;
 }
 
 #header-progress-bar {
