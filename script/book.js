@@ -310,8 +310,11 @@ formBook.addEventListener("submit", (ev)=>{
     let date = dateButton.value;
     let time = timeButton.value;
     
-    if(checkDate(date, dateButton) && today && checkTime(time,timeButton)){
-        today = false;
+    if(checkDate(date, dateButton)){
+        if (today) {
+            checkTime(time,timeButton);
+            today = false;
+        }
         if (checkDayHour(time, timeButton)){
             timeCorrection(time, timeButton);
             formBook.submit();

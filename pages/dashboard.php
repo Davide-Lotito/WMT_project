@@ -74,7 +74,7 @@
     <?php
         require_once("../php/config.php");
         require_once("../php/getReservation.php");
-        require_once("../php/deleteOld.php");
+        include("../php/deleteOld.php");
         deleteOldReservation($conn);
 
         if(isset($_GET['all'])) {
