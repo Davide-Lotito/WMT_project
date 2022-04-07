@@ -78,7 +78,6 @@
         deleteOldReservation($conn);
 
         if(isset($_GET['all'])) {
-            // $sql = "SELECT id, name, phone, date, time, people, allergies FROM reservations";
             $sql = "SELECT * FROM `reservations` ORDER BY `reservations`.`date` ASC ";
             $result = $conn->query($sql);
         }else if(isset($_GET['today'])) {

@@ -10,8 +10,8 @@
         // }
         $sql = "DELETE FROM `reservations` WHERE `date` < '$d' ";
         $result = $conn->query($sql);
-        $sql = "DELETE FROM `reservations` WHERE `date` = '$d' and `time` < '$t' ";
-        $result = $conn->query($sql);
+        //$sql = "DELETE FROM `reservations` WHERE `date` = '$d' and `time` < '$t' ";
+        //$result = $conn->query($sql);
         return $result;
     }
 ?>

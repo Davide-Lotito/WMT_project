@@ -210,7 +210,7 @@ function isValidName(name) {
 }
 
 /**
- * Check if the inserted name has at least 5 characters and if they are only letters
+ * Check if the inserted name has at least 3 characters and if they are only letters
  * @param {*} name 
  * @returns true if is ok
  */
