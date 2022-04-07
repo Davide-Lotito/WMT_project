@@ -100,7 +100,7 @@ body {
         border-radius: 0;
     }
     #counter{
-        font-style: 1em;
+        font-size: 1em;
         text-align: justify;
     }
     #counter:hover{
