@@ -195,14 +195,14 @@ function timeCorrection(time, timeO){
 }
 
 /**
- * Check if the inserted name has at least 5 characters and if they are only letters
+ * Check if the inserted name has at least 2 characters and if they are only letters
  * @param {*} name 
  * @returns true if is ok
  */
 function isValidName(name) {
     const regex = new RegExp('^[a-zA-Z]+$');
-    if ((name.length < 5 || !regex.test(name)) && empty(name)){
-        alert(`Wrong name! At least 5 characters and only letters`);
+    if ((name.length < 2 || !regex.test(name)) && empty(name)){
+        alert(`Wrong name! At least 2 characters and only letters`);
         return false;
     } else {
         return true;
